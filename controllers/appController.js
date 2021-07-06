@@ -1,21 +1,21 @@
 module.exports = function (db) {
   return {
     // Get all examples
-    getExamples: function (req, res) {
-      db.Example.findAll({ where: { UserId: req.session.passport.user.id } }).then(function (dbExamples) {
+    getExample: function (req, res) {
+      db.Examples.findAll({ where: { UserId: req.session.passport.user.id } }).then(function (dbExamples) {
         res.json(dbExamples);
       });
     },
     // Create a new example
-    createExample: function (req, res) {
-      db.Example.create(req.body).then(function (dbExample) {
-        res.json(dbExample);
+    createExamples: function (req, res) {
+      db.Examples.create(req.body).then(function (dbExamples) {
+        res.json(dbExamples);
       });
     },
     // Delete an example by id
-    deleteExample: function (req, res) {
-      db.Example.destroy({ where: { id: req.params.id } }).then(function (dbExample) {
-        res.json(dbExample);
+    deleteExamples: function (req, res) {
+      db.Examples.destroy({ where: { id: req.params.id } }).then(function (dbExamples) {
+        res.json(dbExamples);
       });
     }
   };
