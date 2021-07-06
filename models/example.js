@@ -1,16 +1,16 @@
 module.exports = function (sequelize, DataTypes) {
-  const Reader = sequelize.define('Reader', {
+  const Example = sequelize.define('Example', {
     text: DataTypes.STRING,
     description: DataTypes.TEXT
   });
 
-  Reader.associate = function (models) {
-    Reader.belongsTo(models.User, {
+  Example.associate = function (models) {
+    Example.belongsTo(models.User, {
       foreignKey: {
         allowNull: false
       }
     });
   };
 
-  return Reader;
+  return Example;
 };

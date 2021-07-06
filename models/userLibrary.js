@@ -42,11 +42,11 @@ module.exports = function (sequelize, DataTypes) {
     }
   });
 
-  UserLibrary.associate = function (models) {
-    UserLibrary.hasMany(models.Examples, {
-      onDelete: 'cascade'
-    });
-  };
+  // UserLibrary.associate = function (models) {
+  //   UserLibrary.hasMany(models.Examples, {
+  //     onDelete: 'cascade'
+  //   });
+  // };
 
   // This will check if an unhashed password can be compared to the hashed password stored in our database
   UserLibrary.prototype.validPassword = function (password) {

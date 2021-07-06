@@ -23,7 +23,7 @@ module.exports = function (sequelize, DataTypes) {
     },
     username: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
       unique: {
         args: true,
         msg: 'Username already exists'
@@ -55,7 +55,7 @@ module.exports = function (sequelize, DataTypes) {
   });
 
   User.associate = function (models) {
-    User.hasMany(models.Examples, {
+    User.hasMany(models.Example, {
       onDelete: 'cascade'
     });
   };
