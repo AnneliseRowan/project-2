@@ -1,5 +1,3 @@
-//ORM goes with other examples
-
 // Get references to page elements
 const $exampleText = $('#example-text');
 const $exampleDescription = $('#example-description');
