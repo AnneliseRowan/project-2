@@ -1,3 +1,6 @@
+
+
+
 language: node_js
 node_js: "10"
 branches:
@@ -9,4 +12,4 @@ cache:
   directories:
     - node_modules
 before_install:
-  - mysql -e 'CREATE DATABASE project2_test;'
+  - mysql -e 'CREATE DATABASE follow_the_reader;' 
