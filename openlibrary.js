@@ -1,5 +1,40 @@
 //open library api
 
+// function ratatouilleRecipe() {
+// 	$.ajax({
+// 		url: mealAPI + frenchID,
+// 		method: 'GET'
+// 	}).then(function (data) {
+// 		$('#recipe-img').attr('src', `${data.meals[0].strMealThumb}`);
+// 		$('#recipe-title').text(data.meals[0].strMeal);
+// 		$('#instructions').text(data.meals[0].strInstructions);
+// 		$('#ingredients-list li').remove();
+// 		for (let index = 1; index <= 15; index++) {
+// 			var x = 'strMeasure' + index
+// 			var y = 'strIngredient' + index
+// 			if (data.meals[0][x] !== null) {
+// 				$('#ingredients-list ul').append(`<li>${data.meals[0][x]} ${data.meals[0][y]}`)
+// 			}
+// 		}
+// 		return;
+// 	})
+// }
+//GET book title and author
+const libraryapi = 'https://openlibrary.org/books/OL31905946M.json';
+
+function getBookTitle() {
+    $.ajax({
+        url: libraryapi,
+        method: 'GET'
+    }).then(function (data) {
+        console.log('TITLE:', data.works.title)
+    })
+}
+
+getBookTitle();
+
+
+
 /* Project Books
 API call – openlibrary.org/books/OL24839567M.json
 
