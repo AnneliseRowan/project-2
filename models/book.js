@@ -1,45 +1,33 @@
-// import important parts of sequelize library
-const { Model, DataTypes } = require("sequelize");
-// import our database connection from config.js
-const sequelize = require("../config/config");
-
-// Initialize Product model (table) by extending off Sequelize's Model class
-class Book extends Model {}
-
-// set up fields and rules for Product model
-Book.init(
-  {
-    // define columns
+module.exports = function (sequelize, DataTypes) {
+  const Book = sequelize.define('Book', {
     id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
       autoIncrement: true,
+      primaryKey: true
     },
     genre: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: true
     },
     aFirstName: {
       type: DataTypes.STRING,
-      allowNull: true,      
+      allowNull: true
     },
-    aFirstName: {
-        type: DataTypes.STRING,
-        allowNull: true,      
+    aLastName: {
+      type: DataTypes.STRING,
+      allowNull: true
     },
     isbn: {
-    type: DataTypes.STRING,
-    allowNull: false,      
-    }, 
-    },
-  {
-    sequelize,
-    timestamps: false,
-    freezeTableName: true,
-    underscored: true,
-    modelName: "book",
-  }
-);
+      type: DataTypes.STRING,
+      allowNull: false
+    }
+  });
 
-module.exports = Book;
+  // Book.associate = function (models) {
+  //   Book.hasMany(models.userLibrary, {
+  //     foreignKey: "book_id",
+  //   });
+  // };
+
+  return Book;
+};

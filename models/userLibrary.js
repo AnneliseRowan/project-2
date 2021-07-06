@@ -1,5 +1,3 @@
-const bcrypt = require('bcrypt');
-// Got the correct module information but haven't touched hooks and below
 module.exports = function (sequelize, DataTypes) {
   const UserLibrary = sequelize.define('UserLibary', {
     id: {
@@ -29,39 +27,7 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false
     }
-  }, {
-    timestamps: true,
-    hooks: {
-      beforeValidate: function (userLibary) {
-        if (userLibary.changed('password')) {
-          return bcrypt.hash(userLibary.password, 10).then((password) => {
-            userLibary.password = password;
-          });
-        }
-      }
-    }
   });
-
-  UserLibrary.associate = function (models) {
-    UserLibrary.hasMany(models.Examples, {
-      onDelete: 'cascade'
-    });
-  };
-
-  // This will check if an unhashed password can be compared to the hashed password stored in our database
-  UserLibrary.prototype.validPassword = function (password) {
-    return bcrypt.compareSync(password, this.password);
-  };
-
-  // Compares passwords
-  UserLibrary.prototype.comparePasswords = function (password, callback) {
-    bcrypt.compare(password, this.password, (error, isMatch) => {
-      if (error) {
-        return callback(error);
-      }
-      return callback(null, isMatch);
-    });
-  };
 
   UserLibrary.prototype.toJSON = function () {
     const values = Object.assign({}, this.get());
