@@ -21,9 +21,21 @@ module.exports = function (sequelize, DataTypes) {
         msg: 'User already exists'
       }
     },
+    username: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: {
+        args: true,
+        msg: 'Username already exists'
+      }
+    },
     password: {
       type: DataTypes.STRING,
       allowNull: false
+    },
+    contact: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: true
     },
     isAdmin: {
       type: DataTypes.BOOLEAN,
