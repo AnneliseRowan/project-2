@@ -9,6 +9,7 @@ router.get('/', async (req, res) => {
   // eslint-disable-next-line no-undef
   const userData = await User.findAll().catch((err) => {
     res.json(err);
+    // include other models????
   });
 
   const users = userData.map((user) => user.get({ plain: true }));
