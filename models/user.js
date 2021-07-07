@@ -21,9 +21,21 @@ module.exports = function (sequelize, DataTypes) {
         msg: 'User already exists'
       }
     },
+    username: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      unique: {
+        args: true,
+        msg: 'Username already exists'
+      }
+    },
     password: {
       type: DataTypes.STRING,
       allowNull: false
+    },
+    contact: {
+      type: DataTypes.BOOLEAN,
+      defaultValue: true
     },
     isAdmin: {
       type: DataTypes.BOOLEAN,
@@ -43,7 +55,7 @@ module.exports = function (sequelize, DataTypes) {
   });
 
   User.associate = function (models) {
-    User.hasMany(models.Example, {
+    User.hasMany(models.Examples, {
       onDelete: 'cascade'
     });
   };
