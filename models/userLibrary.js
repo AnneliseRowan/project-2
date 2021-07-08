@@ -27,6 +27,11 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false
     }
+<<<<<<< HEAD
+=======
+  }, {
+    timestamps: true
+>>>>>>> 7ad89e1f4e8cd08b59c008a2cb5f34679806586c
   });
 
   UserLibrary.prototype.toJSON = function () {

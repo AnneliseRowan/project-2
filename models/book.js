@@ -5,22 +5,20 @@ module.exports = function (sequelize, DataTypes) {
       autoIncrement: true,
       primaryKey: true
     },
-    genre: {
-      type: DataTypes.STRING,
-      allowNull: true
+    title: {
+      type: DataTypes.STRING
     },
-    aFirstName: {
+    author: {
       type: DataTypes.STRING,
+
       allowNull: true
-    },
-    aLastName: {
-      type: DataTypes.STRING,
-      allowNull: true
-    },
-    isbn: {
-      type: DataTypes.STRING,
-      allowNull: false
     }
+    // isbn: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    //   defaultValue: 1000
+    // }
+
   });
 
   // Book.associate = function (models) {

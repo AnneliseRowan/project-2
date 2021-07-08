@@ -1,4 +1,4 @@
-//ORM goes with other examples
+// ORM goes with other examples
 
 // Get references to page elements
 const $exampleText = $('#example-text');
