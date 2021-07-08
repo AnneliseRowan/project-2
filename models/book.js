@@ -10,7 +10,6 @@ module.exports = function (sequelize, DataTypes) {
     },
     author: {
       type: DataTypes.STRING,
-
       allowNull: true
     }
     // isbn: {
