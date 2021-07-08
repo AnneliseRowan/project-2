@@ -1,13 +1,14 @@
 // eslint-disable-next-line no-unused-vars
-const { user } = require('../models/user');
 
 const router = require('express').Router();
+const { user } = require('../models/user');
 
 // get all users
-router.get('/', async (req, res) => {
+router.get('/user', async (req, res) => {
   // User is User model
   // eslint-disable-next-line no-undef
-  const userData = await User.findAll().catch((err) => {
+  console.log('WORKING WORKING WORKING');
+  const userData = await user.findAll().catch((err) => {
     res.json(err);
     // include other models????
     // such as userLibrary
