@@ -3,6 +3,7 @@ module.exports = function (sequelize, DataTypes) {
     id: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
+
       primaryKey: true,
       allowNull: false
     },
@@ -11,6 +12,7 @@ module.exports = function (sequelize, DataTypes) {
     },
     author: {
       type: DataTypes.STRING,
+
       allowNull: true
     }
     // isbn: {
@@ -18,6 +20,7 @@ module.exports = function (sequelize, DataTypes) {
     //   allowNull: false,
     //   defaultValue: 1000
     // }
+
   });
 
   // Book.associate = function (models) {

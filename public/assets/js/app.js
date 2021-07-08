@@ -1,3 +1,5 @@
+// passport might need update/delete - matches authcontroller.js (use ajax call for other apis)
+
 $('#add-user').on('click', function (event) {
   event.preventDefault();
 
