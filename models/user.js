@@ -39,7 +39,6 @@ module.exports = function (sequelize, DataTypes) {
     //   defaultValue: true
     // }
   }, {
-    sequelize,
     timestamps: true,
     freezeTableName: true,
     underscored: true,
