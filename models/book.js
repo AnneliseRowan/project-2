@@ -1,31 +1,26 @@
-
 module.exports = function (sequelize, DataTypes) {
   const Book = sequelize.define('Book', {
     id: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
-      primaryKey: true
-    },
-    genre: {
-      type: DataTypes.STRING,
-      allowNull: true
+
+      primaryKey: true,
+      allowNull: false
     },
     title: {
-      type: DataTypes.STRING,
-      allowNull: true
+      type: DataTypes.STRING
     },
-    aFirstName: {
+    author: {
       type: DataTypes.STRING,
+
       allowNull: true
-    },
-    aLastName: {
-      type: DataTypes.STRING,
-      allowNull: true
-    },
-    isbn: {
-      type: DataTypes.STRING,
-      allowNull: false
     }
+    // isbn: {
+    //   type: DataTypes.STRING,
+    //   allowNull: false,
+    //   defaultValue: 1000
+    // }
+
   });
 
   // Book.associate = function (models) {

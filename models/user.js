@@ -5,7 +5,8 @@ module.exports = function (sequelize, DataTypes) {
     id: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
-      primaryKey: true
+      primaryKey: true,
+      allowNull: false
     },
     firstName: {
       type: DataTypes.STRING
@@ -32,17 +33,16 @@ module.exports = function (sequelize, DataTypes) {
     password: {
       type: DataTypes.STRING,
       allowNull: false
-    },
-    contact: {
-      type: DataTypes.BOOLEAN,
-      defaultValue: true
-    },
-    isAdmin: {
-      type: DataTypes.BOOLEAN,
-      defaultValue: false
     }
+    // contact: {
+    //   type: DataTypes.BOOLEAN,
+    //   defaultValue: true
+    // }
   }, {
     timestamps: true,
+    freezeTableName: true,
+    underscored: true,
+    modelName: 'user',
     hooks: {
       beforeValidate: function (user) {
         if (user.changed('password')) {
