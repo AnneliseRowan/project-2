@@ -130,3 +130,10 @@ $('#login').on('click', function (event) {
     }
   });
 });
+
+//this is for book card 
+$(document).ready(function(){
+  document.getElementById("heart").onclick = function(){
+  document.querySelector(".fa-gratipay").style.color = "#E74C3C";
+  };
+  });
