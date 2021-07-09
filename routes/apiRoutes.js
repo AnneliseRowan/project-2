@@ -21,6 +21,7 @@ module.exports = (passport, db) => {
   router.delete('/examples/:id', AppController.deleteExample);
   // routes for books
   router.get('/books', BookController.getAllBooks);
+  router.get('/books/:id', BookController.getOneBook);
   // routes for users
   router.get('/users', UserController.getAllUsers);
   router.get('/users/:id', UserController.getOneUser);
