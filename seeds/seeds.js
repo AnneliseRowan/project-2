@@ -5,6 +5,7 @@ const sequelize = require('../config/connection');
 // const bookData = require('./bookData');
 const SeedBook = require('./bookData');
 const seedUser = require('./userData');
+const seedUserLibrary = require('./userDataLibrary');
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
@@ -23,6 +24,7 @@ const seedDatabase = async () => {
   //   });
   // }
   await SeedBook();
+  await seedUserLibrary();
   await seedUser();
   process.exit(0);
 };

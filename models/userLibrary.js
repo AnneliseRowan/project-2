@@ -1,5 +1,5 @@
 module.exports = function (sequelize, DataTypes) {
-  const UserLibrary = sequelize.define('UserLibary', {
+  const UserLibrary = sequelize.define('UserLibrary', {
     id: {
       type: DataTypes.INTEGER,
       autoIncrement: true,
@@ -12,30 +12,22 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.INTEGER
     },
     book_read: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false
+      type: DataTypes.BOOLEAN
+      // allowNull: true
     },
     hardcopy: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false
+      type: DataTypes.BOOLEAN
+      // allowNull: true
     },
     current_reading: {
-      type: DataTypes.BOOLEAN,
-      allowNull: false
+      type: DataTypes.BOOLEAN
+      // allowNull: true
     },
     top_3: {
-      type: DataTypes.STRING,
-      allowNull: false
+      type: DataTypes.STRING
+      // allowNull: true
     }
-  }, {
-    timestamps: true
   });
-
-  UserLibrary.prototype.toJSON = function () {
-    const values = Object.assign({}, this.get());
-    delete values.password;
-    return values;
-  };
 
   return UserLibrary;
 };
