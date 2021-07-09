@@ -23,6 +23,7 @@ module.exports = (passport, db) => {
   router.get('/users/:id', UserController.getOneUser);
   router.post('/users', UserController.createUser);
   router.put('/users/:id', UserController.updateUser);
+  router.delete('/users/:id', UserController.deleteUser);
 
   return router;
 };
