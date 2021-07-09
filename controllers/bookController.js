@@ -22,8 +22,23 @@ module.exports = function (db) {
       } catch (err) {
         res.status(500).json(err);
       }
-    }
+    },
+
     // post a new book
+    createBook: async (req, res) => {
+      try {
+        const newBookData = await db.Book.create({
+          title: req.body.title,
+          author: req.body.author
+        });
+        res.status(200).json(newBookData);
+      } catch (err) {
+        res.status(400).json(err);
+      }
+      // add a check for multiple book titles
+      // does not start at next number, starts at number after deleted book
+    }
+
     // update a book ???
     // delete a book
   };

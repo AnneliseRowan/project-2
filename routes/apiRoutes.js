@@ -22,6 +22,7 @@ module.exports = (passport, db) => {
   // routes for books
   router.get('/books', BookController.getAllBooks);
   router.get('/books/:id', BookController.getOneBook);
+  router.post('/books', BookController.createBook);
   // routes for users
   router.get('/users', UserController.getAllUsers);
   router.get('/users/:id', UserController.getOneUser);
