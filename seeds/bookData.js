@@ -40,7 +40,5 @@ const BookData = [
 ];
 
 const SeedBook = () => Book.bulkCreate(BookData);
-const consoleBook = () => console.log('Book:', Book);
 
 module.exports = SeedBook;
-module.exports = consoleBook;
