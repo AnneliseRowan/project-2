@@ -27,6 +27,7 @@ require('./config/passport')(db, app, passport); // pass passport for configurat
 // Define our routes
 app.use('/api', require('./routes/apiRoutes')(passport, db));
 app.use(require('./routes/htmlRoutes')(db));
+// app.use(require('./routes/index.js'));
 
 // Secure express app
 app.use(helmet.hsts({
@@ -52,7 +53,7 @@ if (app.get('env') === 'test') {
 
 db.sequelize.sync(syncOptions).then(() => {
   if (app.get('env') !== 'test' && syncOptions.force) {
-    require('./db/seed')(db);
+    require('./seeds/seeds')(db);
   }
 
   app.listen(PORT, () => {
