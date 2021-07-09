@@ -2,12 +2,10 @@ const { Book } = require('../models/book');
 
 const BookData = [
   {
-    id: 1,
     title: 'Lord of the Rings',
     author: 'JRR Tolkien'
   },
   {
-    id: 2,
     title: 'To Kill A Mockingbird',
     author: 'Harper Lee'
   },
