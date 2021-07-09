@@ -4,7 +4,7 @@ const { user } = require('../models');
 const router = require('express').Router();
 
 // get all users
-router.get('/', async (req, res) => {
+router.get('/user', async (req, res) => {
   // User is User model
   // eslint-disable-next-line no-undef
   const userData = await User.findAll().catch((err) => {
