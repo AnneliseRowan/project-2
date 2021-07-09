@@ -38,8 +38,7 @@ module.exports = function (db) {
       // add a check for multiple book titles
       // does not start at next number, starts at number after deleted book
     }
-
     // update a book ???
-    // delete a book
+    // delete a book ???
   };
 };
