@@ -46,11 +46,13 @@ module.exports = function (db) {
     updateUser: async (req, res) => {
       try {
         const updatedUserData = await db.User.update(
-          { username: req.body.username },
+          { username: req.body.username,
+            password: req.body.password },
           { where: {
             id: req.params.id
           }
           });
+          // add some kind of alert to notify the update has been made??
         res.status(200).json(updatedUserData);
       } catch (err) {
         res.status(400).json(err);
