@@ -1,4 +1,4 @@
-// FUNCTIONS FOR RENDERING JSON USERS;
+// FUNCTIONS FOR RENDERING JSON USERS FROM DATABASE;
 
 module.exports = function (db) {
   return {
