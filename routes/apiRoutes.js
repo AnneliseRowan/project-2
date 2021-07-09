@@ -21,6 +21,8 @@ module.exports = (passport, db) => {
   router.get('/book', () => { console.log(); });
   router.get('/users', UserController.getAllUsers);
   router.get('/users/:id', UserController.getOneUser);
+  router.post('/users', UserController.createUser);
+  router.put('/users/:id', UserController.updateUser);
 
   return router;
 };
