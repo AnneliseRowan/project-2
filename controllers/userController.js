@@ -2,6 +2,7 @@
 
 module.exports = function (db) {
   return {
+    // list all users with json
     getAllUsers: async (req, res) => {
       try {
         const userData = await db.User.findAll();
@@ -10,6 +11,8 @@ module.exports = function (db) {
         res.status(500).json(err);
       }
     },
+
+    // list one user by id with json
     getOneUser: async (req, res) => {
       try {
         const userData = await db.User.findByPk(req.params.id);
