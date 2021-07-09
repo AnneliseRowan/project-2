@@ -20,7 +20,7 @@ module.exports = (passport, db) => {
   router.delete('/examples/:id', AppController.deleteExample);
   router.get('/book', () => { console.log(); });
   router.get('/users', UserController.getAllUsers);
-  // router.get('/users', UserController.getOneUser);
+  router.get('/users/:id', UserController.getOneUser);
 
   return router;
 };
