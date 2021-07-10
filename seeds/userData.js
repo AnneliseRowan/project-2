@@ -39,8 +39,8 @@ const UserData = [
   {
     firstName: 'Rachael',
     lastName: 'Davis',
-    email: 'Rachel@Davis.com',
-    username: 'RachelDavis',
+    email: 'Rachael@Davis.com',
+    username: 'RachaelDavis',
     password: 'password123456'
   }
 ];
