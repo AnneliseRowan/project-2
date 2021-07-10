@@ -15,7 +15,8 @@ module.exports = function (db) {
     // list one user by id with json
     getOneUser: async (req, res) => {
       try {
-        const userData = await db.User.findByPk(req.params.id);
+        const userData = await db.User.findByPk(req.params.id,
+          { include: [{ model: db.userLibrary }] });
         if (!userData) {
           res.status(404).json({ message: 'No user found with this id!!!!' });
         } res.status(200).json(userData);

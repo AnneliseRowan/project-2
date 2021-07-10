@@ -1,0 +1,29 @@
+{{> nav/nav-block}}
+
+<div class="container">
+  <div class="row">
+    <div class="col-8 offset-2">
+      <div class="card mt-4">
+          {{#each books}}
+        <div class="card-body">
+          <h5 class="card-title">All Books</h5>
+          <p>
+            <strong>Book</strong>: </p>
+            {{this.title}}
+          <p>
+          <p>
+            <strong>Author</strong>: </p>
+            {{this.author}}
+          <p>
+            <a href="/example">← Back To Home</a>
+        </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{{> modal/login-block}}
+
+

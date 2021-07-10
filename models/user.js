@@ -24,7 +24,7 @@ module.exports = function (sequelize, DataTypes) {
     },
     username: {
       type: DataTypes.STRING,
-      allowNull: true,
+      allowNull: false,
       unique: {
         args: true,
         msg: 'Username already exists'
