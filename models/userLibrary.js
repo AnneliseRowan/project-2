@@ -29,5 +29,11 @@ module.exports = function (sequelize, DataTypes) {
     }
   });
 
+  // UserLibrary.associate = function (models) {
+  //   UserLibrary.belongsToMany(models.User, {
+  //     through: 'user_id'
+  //   });
+  // };
+
   return UserLibrary;
 };
