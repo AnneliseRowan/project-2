@@ -6,42 +6,42 @@ const UserData = [
     lastName: 'Rowan',
     email: 'Annelise@Rowan.com',
     username: 'GoingRowan',
-    password: 'password1'
+    password: '$2b$10$KdjMcjeSCxZKOkN7iumV/eUip35Gwd/ifmTZmDIj6rWPCLLlaByjG'
   },
   {
     firstName: 'Jonathan',
     lastName: 'Nance',
     email: 'Jonathan@Nance.com',
     username: 'JNance',
-    password: 'password12'
+    password: '$2b$10$KdjMcjeSCxZKOkN7iumV/eUip35Gwd/ifmTZmDIj6rWPCLLlaByjG'
   },
   {
     firstName: 'James',
     lastName: 'Antley',
     email: 'James@Antley.com',
     username: 'JAntley',
-    password: 'password123'
+    password: '$2b$10$KdjMcjeSCxZKOkN7iumV/eUip35Gwd/ifmTZmDIj6rWPCLLlaByjG'
   },
   {
     firstName: 'Alexis',
     lastName: 'Ligon',
     email: 'Alexis@Ligon.com',
     username: 'LexLigon',
-    password: 'password1234'
+    password: '$2b$10$KdjMcjeSCxZKOkN7iumV/eUip35Gwd/ifmTZmDIj6rWPCLLlaByjG'
   },
   {
     firstName: 'Naomi',
     lastName: 'Valdovinos',
     email: 'Naomi@Valdovinos.com',
     username: 'NaomiV',
-    password: 'password12345'
+    password: '$2b$10$KdjMcjeSCxZKOkN7iumV/eUip35Gwd/ifmTZmDIj6rWPCLLlaByjG'
   },
   {
     firstName: 'Rachael',
     lastName: 'Davis',
     email: 'Rachael@Davis.com',
     username: 'RachaelDavis',
-    password: 'password123456'
+    password: '$2b$10$KdjMcjeSCxZKOkN7iumV/eUip35Gwd/ifmTZmDIj6rWPCLLlaByjG'
   }
 ];
 
