@@ -32,3 +32,4 @@ TP=mysql_password
  * books you want to read
  * add books option
  * suggestions for what to read next
+ * when you click on a book, a list populates of users currently reading

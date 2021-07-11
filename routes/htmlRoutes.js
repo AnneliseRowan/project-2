@@ -103,7 +103,6 @@ module.exports = (db) => {
   // render all books in database
   router.get('/allbooks', function (req, res) {
     db.Book.findAll().then(function (Book) {
-      console.log('BOOOOK', Book[0]);
       res.render('all-books', { books: Book });
     });
   });
