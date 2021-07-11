@@ -22,4 +22,10 @@ FORCE_SYNC=true_or_false
 TU=mysql_user
 TP=mysql_password
 ```
-trying to push
+## FUTURE DEVELOPMENTS
+ * search for other users
+ * chat option with users 
+ * search for books by genre
+ * suggested users with books in common
+ * books you want to read
+ * add books option
