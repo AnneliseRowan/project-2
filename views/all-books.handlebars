@@ -5,19 +5,25 @@
     <div class="col-8 offset-2">
       <div class="card mt-4">
         <a href="/example">← Back To Home</a>
-        <h5 class="card-title">All Books</h5>
-        {{#each books}}
+        <h1 class="card-title">All Books</h1>
+
+        {{!-- {{#each books}}
         <div class="card-body">
-
-          <h4>Book:</h4>
-          <h5> {{this.title}} </h5>
-
-
-          <h4>Author:</h4>
+          <h2> {{this.title}} </h2>
+          <h4>By:</h4>
           <h5> {{this.author}}</h5>
+        </div>
+        {{/each}} --}}
 
+        {{#each books}}
+        <div class="card border-info mb-3 mx-auto" style="max-width: 18rem;">
+          <div class="card-body">
+            <h5 class="card-title">{{this.title}}</h5>
+            <h6 class="card-text">{{this.author}}</h6>
+          </div>
         </div>
         {{/each}}
+
       </div>
     </div>
   </div>
