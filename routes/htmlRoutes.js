@@ -100,31 +100,18 @@ module.exports = (db) => {
     });
   });
 
+  // render all books in database
   router.get('/allbooks', function (req, res) {
-    // if (req.isAuthenticated()) {
-    // db.Example.findAll({ where: { UserId: req.session.passport.user.id }, raw: true }).then(function (dbExamples) {
     db.Book.findAll().then(function (Book) {
       console.log('BOOOOK', Book[0]);
-      // const parsedBooks = JSON.parse(Book);
-      // console.log('parsedbooks', parsedBooks);
       res.render('all-books', { books: Book });
     });
-
-    // });
   });
+
   // Render 404 page for any unmatched routes
   router.get('*', function (req, res) {
     res.render('404');
   });
-
-  // trying to render books
-
-  // router.get('/book', function (req, res) {
-  //   books.findAll(bookData => {
-  //     const allBooks = { books: bookData };
-  //     res.render('index', allBooks);
-  //   });
-  // });
 
   return router;
 };
