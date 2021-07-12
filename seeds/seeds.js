@@ -3,7 +3,7 @@ const sequelize = require('../config/connection');
 
 // const userData = require('./userData');
 // const bookData = require('./bookData');
-const SeedBook = require('./bookData');
+const seedBook = require('./bookData');
 const seedUser = require('./userData');
 const seedUserLibrary = require('./userDataLibrary');
 
@@ -23,7 +23,7 @@ const seedDatabase = async () => {
   //     // user_id: users[Math.floor(Math.random() * users.length)].id
   //   });
   // }
-  await SeedBook();
+  await seedBook();
   await seedUserLibrary();
   await seedUser();
   process.exit(0);

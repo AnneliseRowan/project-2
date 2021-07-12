@@ -29,5 +29,13 @@ module.exports = function (sequelize, DataTypes) {
     }
   });
 
+  UserLibrary.associate = function (models) {
+    UserLibrary.belongsTo(models.User, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
+
   return UserLibrary;
 };
