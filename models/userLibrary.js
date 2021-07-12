@@ -35,6 +35,11 @@ module.exports = function (sequelize, DataTypes) {
         allowNull: false
       }
     });
+    UserLibrary.belongsTo(models.Book, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
   };
 
   // UserLibrary.associate = function (models) {
