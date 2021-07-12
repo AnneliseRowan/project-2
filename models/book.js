@@ -20,11 +20,9 @@ module.exports = function (sequelize, DataTypes) {
 
   });
 
-  // Book.associate = function (models) {
-  //   Book.hasMany(models.userLibrary, {
-  //     foreignKey: "book_id",
-  //   });
-  // };
+  Book.associate = function (models) {
+    Book.hasMany(models.UserLibrary);
+  };
 
   return Book;
 };
