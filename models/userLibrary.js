@@ -37,5 +37,13 @@ module.exports = function (sequelize, DataTypes) {
     });
   };
 
+  // UserLibrary.associate = function (models) {
+  //   UserLibrary.belongsTo(models.Book, {
+  //     foreignKey: {
+  //       allowNull: false
+  //     }
+  //   });
+  // };
+
   return UserLibrary;
 };
