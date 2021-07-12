@@ -7,10 +7,10 @@ module.exports = function (db) {
           include: [
             {
               model: db.User
+            },
+            {
+              model: db.Book
             }
-            // {
-            //   model: db.Book
-            // }
           ]
         });
         res.status(200).json(userLibraryData);
