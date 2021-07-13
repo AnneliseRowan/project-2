@@ -35,6 +35,12 @@ module.exports = (passport, db) => {
   router.get('/jon/book/:id', UserLibraryController.getOneUserLibrary);
   router.post('/jon', UserLibraryController.createEntry);
   router.get('/jon/user/:id', UserLibraryController.getAllOwnedBy);
+  router.get('/jon/hard', UserLibraryController.getAllHard);
+  router.get('/jon/soft', UserLibraryController.getAllSoft);
+  router.get('/jon/soft/:id', UserLibraryController.getOneSoft);
+  router.get('/jon/hard/:id', UserLibraryController.getOneHard);
+  router.get('/jon/read/:id', UserLibraryController.getOneRead);
+  router.get('/jon/read', UserLibraryController.getAllRead);
 
   return router;
 };
