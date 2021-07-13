@@ -34,9 +34,24 @@ module.exports = function (sequelize, DataTypes) {
 >>>>>>> Stashed changes
   });
 
+  UserLibrary.associate = function (models) {
+    UserLibrary.belongsTo(models.User, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+    UserLibrary.belongsTo(models.Book, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
+
   // UserLibrary.associate = function (models) {
-  //   UserLibrary.belongsToMany(models.User, {
-  //     through: 'user_id'
+  //   UserLibrary.belongsTo(models.Book, {
+  //     foreignKey: {
+  //       allowNull: false
+  //     }
   //   });
   // };
 
