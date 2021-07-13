@@ -45,7 +45,7 @@ body {
 }
 
 .container {
-  padding-bottom: 3%;
+  padding-bottom: 2%;
   margin-top: 10%;
   background: rgba(86, 101, 115,.6);
   height:100%;
@@ -91,7 +91,7 @@ hr {
   background-repeat: repeat
 }
 
-#loggedIn, h3 {
+#loggedIn, p, h3 {
   color: rgba(255, 255, 255, 0.781);
 }
 
@@ -115,11 +115,7 @@ hr {
 
 .photo img {
   height: 100%;
-  width: 100%;
-}
-
-img{
-  padding: 20px
+  width: 100%
 }
 
 .txt1 {
@@ -164,11 +160,6 @@ img{
 .txt2 {
   position: relative;
   top: 10px
-}
-
-#dashText, #titleText {
-  color: black;
-  font-size: 23px
 }
 
 .cardcontainer:hover>.photo {
@@ -241,12 +232,4 @@ img{
 .fa-clock,
 .fa-comments {
   margin-right: 7px
-}
-
-.form-control{
-  color: #fff
-}
-
-.fab{
-  margin-left: 95px;
 }

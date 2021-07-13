@@ -137,37 +137,3 @@ $(document).ready(function () {
     document.querySelector('.fa-gratip+3.ay').style.color = '#E74C3C';
   };
 });
-
-// JS for Dynamic Questions - Need to Fix this
-
-// $(Survey.Survey.cssType = 'bootstrap');
-
-// const json = {
-//   'elements': [
-//     {
-//       'type': 'tagbox',
-//       'isRequired': true,
-//       'choicesByUrl': {
-//         'url': 'https://restcountries.eu/rest/v1/all'
-//       },
-//       'name': 'countries',
-//       'title': 'Please select all the countries you visited in the last 3 years.'
-//     }
-//   ]
-// };
-
-// window.survey = new Survey.Model(json);
-
-// survey
-//   .onComplete
-//   .add(function (result) {
-//    document
-//             .querySelector('#surveyResult')
-//             .innerHTML = 'result: ' + JSON.stringify(result.data);
-//     });
-
-// survey.data = {
-//     countries: ['France']
-// };
-
-// $('#surveyElement').Survey({model: survey});
