@@ -55,6 +55,7 @@ module.exports = function (db) {
               model: db.Book
             }
           ] });
+
         res.status(200).json(userLibraryData);
       } catch (err) {
         res.status(500).json(err);
@@ -180,7 +181,8 @@ module.exports = function (db) {
             {
               model: db.Book
             }
-          ] });
+          ] }); 
+
         res.status(200).json(userLibraryData);
       } catch (err) {
         res.status(500).json(err);

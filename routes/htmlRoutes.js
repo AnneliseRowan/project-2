@@ -13,7 +13,7 @@ module.exports = (db) => {
   // Load profile page
   router.get('/profile', async (req, res) => {
     if (req.isAuthenticated()) {
-      await db.UserLibrary.findAll({
+      db.UserLibrary.findAll({
         where: {
           UserId: req.session.passport.user.id
         },
@@ -30,8 +30,8 @@ module.exports = (db) => {
           userInfo: req.session.passport.user,
           isloggedin: req.isAuthenticated()
         };
-        // console.log('I am booklist!!', booklist);
-        console.log('this is userInfoName', user.userInfo.username);
+
+
         res.render('profile', user);
       });
     } else {
