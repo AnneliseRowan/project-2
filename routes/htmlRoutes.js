@@ -1,4 +1,5 @@
 const router = require('express').Router();
+// const book = require('../models/book');
 
 module.exports = (db) => {
   // Load register page
@@ -11,18 +12,26 @@ module.exports = (db) => {
   });
 
   // Load profile page
-  router.get('/profile', (req, res) => {
+  router.get('/profile', async (req, res) => {
     if (req.isAuthenticated()) {
-      db.User.findOne({
+      db.UserLibrary.findAll({
         where: {
-          id: req.session.passport.user.id
-        }
+          UserId: req.session.passport.user.id
+        },
+        include: [
+          {
+            model: db.User
+          },
+          {
+            model: db.Book
+          }
+        ]
       }).then(() => {
         const user = {
           userInfo: req.session.passport.user,
           isloggedin: req.isAuthenticated()
         };
-        // console.log(user);
+
         res.render('profile', user);
       });
     } else {
@@ -96,6 +105,13 @@ module.exports = (db) => {
       }
       res.clearCookie('connect.sid', { path: '/' });
       res.redirect('/');
+    });
+  });
+
+  // render all books in database
+  router.get('/allbooks', function (req, res) {
+    db.Book.findAll().then(function (Book) {
+      res.render('all-books', { books: Book });
     });
   });
 
