@@ -1,19 +1,30 @@
 [![Build Status](https://travis-ci.com/alperg/project2-starter-auth.svg?branch=master)](https://travis-ci.com/alperg/project2-starter-auth)
 
-# FOLLOW THE READER
+# Project 2 - Follow the Reader
+```
+Are you a book lover looking for someone to discuss your latest read with? Maybe you would like to meet new people with who are interested in the same genere? Or are you just looking for new books to read?
 
-[Github Repo](https://github.com/AnneliseRowan/project-2)
+Follow the Reader is the newest app on the market that allows the user to meet new people and share a love of books using our app. This app allows the users to looks for other users who have similar tastes in books as well as searching a data base for new books!
+```
 
-Application for all bibliophiles! Browse our endless collection of books to build your own unique collections of books you've read, want to read, love, hate and everything in between. Chat with fellow bookworms, keep up with what others are reading or planning to read, get ideas for what to read next! 
+## User Stories
+
+* As a user, I want to see a list of books.
+
+* As a user, I want to be able to create an account.
+
+* As a registered user, I want to post my owned books.
 
 ## Live link:
 https://project2-starter-auth.herokuapp.com/
 
 ## Requirements:
 
-* Add `.env` file with the following content:
+* Node.JS
 
 ```
+Here is the code you will need for the .env file:
+
 SEQUELIZE_USER=your_mysql_db_user
 SEQUELIZE_PASSWORD=your_mysql_db_password
 SEQUELIZE_HOST=your_mysql_db_host
@@ -24,12 +35,3 @@ FORCE_SYNC=true_or_false
 TU=mysql_user
 TP=mysql_password
 ```
-## FUTURE DEVELOPMENTS
- * search for other users
- * chat option with users 
- * search for books by genre
- * suggested users with books in common
- * books you want to read
- * add books option
- * suggestions for what to read next
- * when you click on a book, a list populates of users currently reading

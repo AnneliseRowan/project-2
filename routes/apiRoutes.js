@@ -6,6 +6,7 @@ module.exports = (passport, db) => {
   const AppController = require('../controllers/appController')(db);
   const UserController = require('../controllers/userController')(db);
   const BookController = require('../controllers/bookController')(db);
+  const UserLibraryController = require('../controllers/userLibraryController')(db);
 
   // Authentication
   router.post('/register', AuthController.register);
@@ -29,6 +30,11 @@ module.exports = (passport, db) => {
   router.post('/users', UserController.createUser);
   router.put('/users/:id', UserController.updateUser);
   router.delete('/users/:id', UserController.deleteUser);
+  // routs for userLibrary
+  router.get('/jon', UserLibraryController.getAllUserLibrary);
+  router.get('/jon/book/:id', UserLibraryController.getOneUserLibrary);
+  router.post('/jon', UserLibraryController.createEntry);
+  router.get('/jon/user/:id', UserLibraryController.getAllOwnedBy);
 
   return router;
 };
