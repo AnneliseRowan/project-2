@@ -34,7 +34,7 @@ module.exports = (passport, db) => {
   router.get('/jon', UserLibraryController.getAllUserLibrary);
   router.get('/jon/book/:id', UserLibraryController.getOneUserLibrary);
   router.post('/jon', UserLibraryController.createEntry);
-  router.get('/jon/jon/books', UserLibraryController.getAllOwnedBy);
+  router.get('/jon/user/:id', UserLibraryController.getAllOwnedBy);
 
   return router;
 };
