@@ -61,6 +61,132 @@ module.exports = function (db) {
       }
     },
 
+    // get all  hard cover books books
+    getAllHard: async (req, res) => {
+      try {
+        const userLibraryData = await db.UserLibrary.findAll({ where: { hardcopy: true },
+          include: [
+            {
+              model: db.User
+            },
+            {
+              model: db.Book
+            }
+          ] });
+        res.status(200).json(userLibraryData);
+      } catch (err) {
+        res.status(500).json(err);
+      }
+    },
+
+    // get all  soft cover books books
+    getAllSoft: async (req, res) => {
+      try {
+        const userLibraryData = await db.UserLibrary.findAll({ where: { hardcopy: false },
+          include: [
+            {
+              model: db.User
+            },
+            {
+              model: db.Book
+            }
+          ] });
+        res.status(200).json(userLibraryData);
+      } catch (err) {
+        res.status(500).json(err);
+      }
+    },
+
+    // Get all softcover for one user
+    getOneSoft: async (req, res) => {
+      const user = req.params.id;
+      try {
+        const userLibraryData = await db.UserLibrary.findAll({
+          where: {
+            hardcopy: false,
+            userID: user
+          },
+          include: [
+            {
+              model: db.User
+            },
+            {
+              model: db.Book
+            }
+          ] });
+        res.status(200).json(userLibraryData);
+      } catch (err) {
+        res.status(500).json(err);
+      }
+    },
+
+    // get all hardcover for one user
+    getOneHard: async (req, res) => {
+      const user = req.params.id;
+      try {
+        const userLibraryData = await db.UserLibrary.findAll({
+          where: {
+            hardcopy: true,
+            userID: user
+          },
+          include: [
+            {
+              model: db.User
+            },
+            {
+              model: db.Book
+            }
+          ] });
+        res.status(200).json(userLibraryData);
+      } catch (err) {
+        res.status(500).json(err);
+      }
+    },
+
+    // get all books being currently read by one person
+    getOneRead: async (req, res) => {
+      const user = req.params.id;
+      try {
+        const userLibraryData = await db.UserLibrary.findAll({
+          where: {
+            current_reading: true,
+            userID: user
+          },
+          include: [
+            {
+              model: db.User
+            },
+            {
+              model: db.Book
+            }
+          ] });
+        res.status(200).json(userLibraryData);
+      } catch (err) {
+        res.status(500).json(err);
+      }
+    },
+
+    // get all books being currently read by everyone
+    getAllRead: async (req, res) => {
+      try {
+        const userLibraryData = await db.UserLibrary.findAll({
+          where: {
+            current_reading: true
+          },
+          include: [
+            {
+              model: db.User
+            },
+            {
+              model: db.Book
+            }
+          ] });
+        res.status(200).json(userLibraryData);
+      } catch (err) {
+        res.status(500).json(err);
+      }
+    },
+
     // post a new book
     createEntry: async (req, res) => {
       try {
