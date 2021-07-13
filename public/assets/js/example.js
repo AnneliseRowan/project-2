@@ -102,6 +102,7 @@ $exampleList.on('click', '.delete', handleDeleteBtnClick);
 // the autofill
 
 // eslint-disable-next-line new-cap
+// this works even if it is underlined lol
 const autoCompleteJS = new autoComplete({
   data: {
     src: [
