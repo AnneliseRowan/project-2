@@ -91,7 +91,7 @@ hr {
   background-repeat: repeat
 }
 
-#loggedIn, p, h3 {
+#loggedIn, h3 {
   color: rgba(255, 255, 255, 0.781);
 }
 
@@ -115,7 +115,11 @@ hr {
 
 .photo img {
   height: 100%;
-  width: 100%
+  width: 100%;
+}
+
+img{
+  padding: 20px
 }
 
 .txt1 {
@@ -160,6 +164,11 @@ hr {
 .txt2 {
   position: relative;
   top: 10px
+}
+
+#dashText, #titleText {
+  color: black;
+  font-size: 23px
 }
 
 .cardcontainer:hover>.photo {
@@ -232,4 +241,8 @@ hr {
 .fa-clock,
 .fa-comments {
   margin-right: 7px
+}
+
+.form-control{
+  color: #fff
 }
