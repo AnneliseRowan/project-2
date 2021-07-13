@@ -32,7 +32,6 @@ module.exports = (db) => {
           isloggedin: req.isAuthenticated()
         };
 
-
         res.render('profile', user);
       });
     } else {
