@@ -11,18 +11,27 @@ module.exports = (db) => {
   });
 
   // Load profile page
-  router.get('/profile', (req, res) => {
+  router.get('/profile', async (req, res) => {
     if (req.isAuthenticated()) {
-      db.User.findOne({
+      db.UserLibrary.findAll({
         where: {
-          id: req.session.passport.user.id
-        }
+          UserId: req.session.passport.user.id
+        },
+        include: [
+          {
+            model: db.User
+          },
+          {
+            model: db.Book
+          }
+        ]
       }).then(() => {
         const user = {
           userInfo: req.session.passport.user,
           isloggedin: req.isAuthenticated()
         };
-        // console.log(user);
+
+
         res.render('profile', user);
       });
     } else {
