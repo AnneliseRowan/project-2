@@ -42,7 +42,11 @@
     "bcrypt": "^5.0.0",
     "connect-session-sequelize": "^7.0.3",
     "cookie-parser": "^1.4.5",
+<<<<<<< Updated upstream
     "csv-to-mysql": "^0.0.5",
+=======
+    "csvtojson": "^2.0.10",
+>>>>>>> Stashed changes
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-handlebars": "^5.1.0",
@@ -50,6 +54,7 @@
     "helmet": "^4.1.1",
     "moment": "^2.29.0",
     "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
     "mysql2": "^2.2.5",
     "passport": "^0.4.1",
     "passport-local": "^1.0.0",

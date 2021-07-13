@@ -27,6 +27,11 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.STRING
       // allowNull: true
     }
+<<<<<<< Updated upstream
+=======
+  }, {
+    timestamps: false
+>>>>>>> Stashed changes
   });
 
   // UserLibrary.associate = function (models) {
