@@ -6,13 +6,23 @@
       <div class="col-8 offset-2">
         <h2 style="padding-top: 20px;">{{msg}}</h2>
         <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
             {{!-- <label for="example-description">Book Title</label> --}}
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Search by book title or author"></textarea>
-          </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
+          
+            <div class="body" align="center">
+              <div class="autoComplete_wrapper form-outline w-100">
+                <input style="height: 58px; width: 436px" id="autoComplete" type="text" tabindex="1">
+              </div>
+              <div class="mode">
+                <h4>mode</h4>
+                <div class="toggle">
+                  <div class="toggler">Strict</div>
+                </div>
+              </div>
+              <div class="selection"></div>
+            </div>      
+          {{!-- <button id="submit" class="btn btn-primary float-right">Submit</button> --}}
         </form>
-        <h4>Books I am looking for or Interested in:</h4>
+        {{!-- <h4>Books I am looking for or Interested in:</h4> --}}
         <ul id="example-list" class="list-group">
           {{#each examples}}
           <li data-id="{{this.id}}" class="list-group-item">
