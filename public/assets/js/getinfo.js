@@ -1,9 +1,9 @@
 const API = {
-  getOneUserLibrary: function (example) {
+  getOneUserLibrary: function (id) {
     return $.ajax({
       type: 'GET',
-      url: 'api/jon/book/',
-      data: JSON.stringify(example)
+      url: 'api/jon/book/' + id,
+      data: JSON.stringify(id)
     });
   },
   getOneRead: function (id) {
@@ -21,9 +21,9 @@ const API = {
 };
 
 const getInfo = function () {
-  console.log(window.userId, 'userid');
+  // console.log(window.userId, 'userid');
   const currentUserId = document.getElementById('userId').getAttribute('data-currentId');
-  console.log(currentUserId, 'currentUserId');
+  // console.log(currentUserId, 'currentUserId');
   API.getOneUserLibrary(currentUserId).then(function (data1) {
     console.log('data1:', data1);
     // return;
