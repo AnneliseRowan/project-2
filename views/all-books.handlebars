@@ -1,11 +1,34 @@
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
+  <!-- Brand/logo -->
+  <a class="navbar-brand" href="/">
+    Follow the Reader
+  </a>
+  
+  <!-- Links -->
+  <ul class="nav navbar-nav ml-auto">
+
+      <li class="nav-item">
+        <a class="nav-link" href="/profile">My Profile</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/logout">Logout</a>
+      </li>
+
+  </ul>
+</nav>
+
 {{> nav/nav-block}}
+
 
 <div class="container">
   <div class="row">
     <div class="col-8 offset-2">
       <div class="card mt-4">
         <a href="/profile">← Back to Profile</a>
-        <h1 class="card-title">All Books</h1>
+        <header align="center" class="header-wrap">
+          <h3>Our Current Library:</h3>
+        </header>
 
         {{#each books}}
         <div class="card border-info mb-3 mx-auto" style="max-width: 18rem;">
