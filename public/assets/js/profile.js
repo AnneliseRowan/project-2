@@ -101,7 +101,6 @@ const handleDeleteBtnClick = function () {
 $submitBtn.on('click', handleFormSubmit);
 $exampleList.on('click', '.delete', handleDeleteBtnClick);
 
-
 // the autofill
 // added this to try and return book data for autopopulate
 
