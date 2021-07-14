@@ -91,11 +91,10 @@ hr {
   background-repeat: repeat
 }
 
-#loggedIn, h3 {
-  color: rgba(255, 255, 255, 0.781);
+#loggedIn, p, h3 {
+  color: black;
+
 }
-
-
 
 /* .cardcontainer {
   width: 350px;
@@ -293,8 +292,6 @@ transition: all 0.2s ease;
 outline: none;
 } 
 
-
-
 /* h1 {
 color: rgba(255, 122, 122, 1);
 transition: var(--transition-1);
@@ -309,6 +306,9 @@ h1 > a::selection {
 color: rgb(255, 122, 122);
 } */
 
+.centering {
+  padding-left: 113 px !important; 
+}
 
 .mode {
 margin-bottom: 5px;
