@@ -91,9 +91,8 @@ hr {
   background-repeat: repeat
 }
 
-#loggedIn, h3 {
-  color: rgba(255, 255, 255, 0.781);
-}
+#loggedIn, p, h3 {
+  color: black;
 
 .cardcontainer {
   width: 350px;

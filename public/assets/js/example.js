@@ -336,7 +336,6 @@ const autoCompleteJS = new autoComplete({
         info.innerHTML = `Displaying <strong>${data.results.length}</strong> out of <strong>${data.matches.length}</strong> results`;
       } else {
         info.innerHTML = `Found <strong>${data.matches.length}</strong> matching results for <strong>"${data.query}"</strong>`;
-        console.log(data.query);
       }
       list.prepend(info);
     },
@@ -357,7 +356,6 @@ const autoCompleteJS = new autoComplete({
       <span style="display: flex; align-items: center; font-size: 13px; font-weight: 100; text-transform: uppercase; color: rgba(0,0,0,.2);">
       </span>`;
     },
-    console.log("dataaaaa", data.match),
     highlight: true
   },
   events: {
