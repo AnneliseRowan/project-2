@@ -109,24 +109,24 @@ module.exports = (db) => {
   });
 
   // render all books in database
-
   // router.get('/allbooks', function (req, res) {
   //   db.Book.findAll().then(function (Book) {
   //     res.render('all-books', { books: Book });
   //   });
   // });
 
-
-  router.get('/allbooks', async (req, res) => {
+  router.get('/allbooks', function (req, res) {
     if (req.isAuthenticated()) {
-      db.Book.findAll().then((Book) => {
-        res.render('all-books', { books: Book });
+      db.Book.findAll().then(function (bookData) {
+        res.render('all-books', {
+          books: bookData,
+          isloggedin: req.isAuthenticated()
+        });
       });
     } else {
       res.redirect('/');
     }
   });
-
 
   // Render 404 page for any unmatched routes
   router.get('*', function (req, res) {
