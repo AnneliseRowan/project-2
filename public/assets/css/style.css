@@ -91,16 +91,13 @@ hr {
   background-repeat: repeat
 }
 
-<<<<<<< HEAD
-#loggedIn, p, h3 {
-  color: black;
-=======
 #loggedIn, h3 {
   color: rgba(255, 255, 255, 0.781);
->>>>>>> d05d634e505cfb506797318b6dde8ff794552b2d
 }
 
-.cardcontainer {
+
+
+/* .cardcontainer {
   width: 350px;
   height: 500px;
   background-color: white;
@@ -120,15 +117,11 @@ hr {
 
 .photo img {
   height: 100%;
-<<<<<<< HEAD
-  width: 100%
-=======
   width: 100%;
 }
 
 img{
   padding: 20px
->>>>>>> main
 }
 
 .txt1 {
@@ -175,14 +168,11 @@ img{
   top: 10px
 }
 
-<<<<<<< HEAD
-=======
 #dashText, #titleText {
   color: black;
   font-size: 23px
 }
 
->>>>>>> main
 .cardcontainer:hover>.photo {
   height: 200px;
   animation: move1 0.5s ease both
@@ -253,9 +243,7 @@ img{
 .fa-clock,
 .fa-comments {
   margin-right: 7px
-}
-<<<<<<< HEAD
-=======
+} */
 
 .form-control{
   color: #fff
@@ -399,4 +387,3 @@ color: #64ceaa;
     margin-top: 15vh;
 }
 }
->>>>>>> main
