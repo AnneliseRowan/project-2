@@ -1,5 +1,6 @@
 {{> nav/nav-block user=true register=false}}
 <div class="row py-5 px-4">
+
     <div class="col-md-5 mx-auto">
         <!-- Profile widget -->
         <div class="bg-white shadow rounded overflow-hidden">
@@ -42,8 +43,77 @@
                     <div class="col-lg-6 pl-lg-1"><img src="https://images.unsplash.com/photo-1475724017904-b712052c192a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="" class="img-fluid rounded shadow-sm"></div>
                 </div>
             </div>
+
+  <div class="col-md-5 mx-auto">
+    <!-- Profile widget -->
+    <div class="bg-white shadow rounded overflow-hidden">
+      <div class="px-4 pt-0 pb-4 cover">
+        <div class="media align-items-end profile-head">
+          <div class="profile mr-3"><img
+              src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80"
+              alt="..." width="130" class="rounded mb-2 img-thumbnail"><a href="#"
+              class="btn btn-outline-dark btn-sm btn-block">Edit profile</a></div>
+          <div class="media-body mb-5 text-white">
+            <h4 class="mt-0 mb-0">{{userInfo.firstName}}</h4>
+            <p class="small mb-4"> <i class="fas fa-map-marker-alt mr-2"></i></p>
+          </div>
+
         </div>
+      </div>
+      <div class="bg-light p-4 d-flex justify-content-end text-center">
+        <ul class="list-inline mb-0">
+          <li class="list-inline-item">
+            <h5 class="font-weight-bold mb-0 d-block">745</h5><small class="text-muted"> <i
+                class="fas fa-user mr-1"></i>Followers</small>
+          </li>
+          <li class="list-inline-item">
+            <h5 class="font-weight-bold mb-0 d-block">340</h5><small class="text-muted"> <i
+                class="fas fa-user mr-1"></i>Following</small>
+          </li>
+        </ul>
+      </div>
+      {{!-- <figure class="image-block">
+        <h1>Book Title</h1>
+        <img src="https://www.dhresource.com/260x260/f2/albu/g21/M01/6E/29/rBVaq2CLyuGAV-8dAAGxfAhLTfs629.jpg" alt="" />
+        <figcaption>
+          <h3>
+            More Info
+          </h3>
+          <p>You can appened any book information here.</p>
+          <!-- 		<button>
+			More Info
+		</button> -->
+        </figcaption>
+      </figure> --}}
     </div>
+  </div>
+</div>
+
+<div class="mb-4" id="home">
+  <div class="container">
+    <div class="row">
+      <div class="col-8 offset-2">
+        <h2>{{msg}}</h2>
+        <h4 class="centering">Currently Reading:</h4>
+        <form class="clearfix mb-4" action="POST">
+            <div class="body" align="center">
+              <div class="autoComplete_wrapper form-outline w-100">
+                <input style="height: 58px; width: 436px" id="autoComplete" type="text" tabindex="1">
+              </div>
+              <div class="selectionFirst"></div>
+            </div>  
+        </form>
+        <ul id="example-list" class="list-group">
+          {{#each examples}}
+          <li data-id="{{this.id}}" class="list-group-item">
+            <a href="example/{{this.id}}">{{this.text}}</a>
+            <button class="btn btn-danger float-right delete">ｘ</button>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
 </div>
 
 <div id="home">
@@ -51,18 +121,15 @@
     <div class="row">
       <div class="col-8 offset-2">
         <h2>{{msg}}</h2>
+        <h4 class="centering">Find Your Top 3 Favorite Books:</h4>
         <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <label for="example-text">Example Text</label>
-            <input type="text" id="example-text" class="form-control" aria-describedby="example-text" placeholder="Enter Example Text">
-          </div>
-          <div class="form-group">
-            <label for="example-description">Example Description</label>
-            <textarea class="form-control" id="example-description" aria-describedby="example-description" placeholder="Enter Example Description"></textarea>
-          </div>
-          <button id="submit" class="btn btn-primary float-right">Submit</button>
+            <div class="body" align="center">
+              <div class="autoComplete_wrapper form-outline w-100">
+                <input style="height: 58px; width: 436px" id="autoComplete" type="text" tabindex="1">
+              </div>
+              <ol class="selection"></ol>
+            </div>  
         </form>
-        <h4>These are books I am looking for or am interested in:</h4>
         <ul id="example-list" class="list-group">
           {{#each examples}}
           <li data-id="{{this.id}}" class="list-group-item">
@@ -82,6 +149,12 @@
 
 
 
+
+{{> modal/login-block}}
+
+
+
+
 {{> modal/login-block}}
 
 
@@ -89,7 +162,7 @@
   <header align="center" class="header-wrap">
     <h3>View or update your user</h3>
     <div class="userId">
-      <h3>Welcome, {{userInfo.firstName}}</h3>
+      {{!-- <h3>Welcome, {{userInfo.firstName}}</h3> --}}
       <h5 id="user-number" data-useremail="{{userInfo.email}}">Account email: {{userInfo.email}}</h5>
     </div>
     <h3 id="update-err-msg"></h3>
@@ -118,48 +191,48 @@
       </div>
     </div>
 
-      <button type="submit" id="update-user" data-id="{{userInfo.id}}" class="btn btn-primary">Update</button>
-      {{#unless userInfo.isAdmin}}
-        <button type="submit" id="delete-user" class="btn btn-primary">Delete</button>
-      {{/unless}}
-      <button type="submit" id="view-user" data-id="{{userInfo.id}}" class="btn btn-primary">Refresh</button>
-    </div>
-  </form>
-  
-  <div class="modal" id="delete-user-modal" tabindex="-1" role="dialog">
-    <div class="modal-dialog" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Re-Enter Credentials to delete user</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
+    <button type="submit" id="update-user" data-id="{{userInfo.id}}" class="btn btn-primary">Update</button>
+    {{#unless userInfo.isAdmin}}
+    <button type="submit" id="delete-user" class="btn btn-primary">Delete</button>
+    {{/unless}}
+    <button type="submit" id="view-user" data-id="{{userInfo.id}}" class="btn btn-primary">Refresh</button>
+</div>
+</form>
 
-        <div class="modal-body">
-          <h3 id="err-msg"></h3>
-          <form>
-            <div class="form-group">
-              <label for="userEmail">Email:</label>
-              <input type="text" class="form-control" id="userEmail">
-            </div>
-            <div class="form-group">
-              <label for="userPassword">Password:</label>
-              <input type="password" class="form-control" id="userPassword">
-            </div>
-          </form>
-        </div>
+<div class="modal" id="delete-user-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Re-Enter Credentials to delete user</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+      <div class="modal-body">
+        <h3 id="err-msg"></h3>
+        <form>
+          <div class="form-group">
+            <label for="userEmail">Email:</label>
+            <input type="text" class="form-control" id="userEmail">
+          </div>
+          <div class="form-group">
+            <label for="userPassword">Password:</label>
+            <input type="password" class="form-control" id="userPassword">
+          </div>
+        </form>
+      </div>
 
 
-        <div class="modal-footer">
-          <button id="confirm-delete" type="button" data-id="{{userInfo.id}}" class="btn btn-primary">Confirm Delete</button>
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Nah I'll stay</button>
-        </div>
+      <div class="modal-footer">
+        <button id="confirm-delete" type="button" data-id="{{userInfo.id}}" class="btn btn-primary">Confirm
+          Delete</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Nah I'll stay</button>
       </div>
     </div>
   </div>
   <!-- Footer -->
-<footer class="page-footer font-small purple darken-3">
+{{!-- <footer class="page-footer font-small purple darken-3">
 
   <!-- Footer Elements -->
   <div class="container">
@@ -193,7 +266,7 @@
           <a class="pin-ic">
             <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
           </a> 
-      </div>
+      </div> --}}
       <!-- Grid column -->
 
     </div>
@@ -213,3 +286,4 @@
 </div>
 
         
+

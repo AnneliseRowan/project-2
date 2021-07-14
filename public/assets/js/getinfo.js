@@ -1,4 +1,5 @@
 const API = {
+
   getOneUserLibrary: function (id) {
     return $.ajax({
       type: 'GET',
@@ -21,6 +22,7 @@ const API = {
 };
 
 const getInfo = function () {
+
   // console.log(window.userId, 'userid');
   const currentUserId = document.getElementById('userId').getAttribute('data-currentId');
   // console.log(currentUserId, 'currentUserId');
@@ -29,8 +31,16 @@ const getInfo = function () {
     // return;
   });
   API.getOneRead(currentUserId).then(function (data2) {
+
+  API.getOneUserLibrary().then(function (data1) {
+    console.log('data1:', data1);
+    // return;
+  });
+  API.getOneRead().then(function (data2) {
+
     console.log('data2:', data2);
     // return;
   });
 };
+
 getInfo();
