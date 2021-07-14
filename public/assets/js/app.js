@@ -142,6 +142,7 @@ $(document).ready(function () {
 =======
 =======
 
+<<<<<<< HEAD
 
 
 $(document).ready(function () {
@@ -151,6 +152,8 @@ $(document).ready(function () {
 });
 
 
+=======
+>>>>>>> e3648837e742a247bfff0790f191059708538fe5
 // move this to example.handlebar
 //$(document).ready(function () {
  // document.getElementById('heart').onclick = function () {
@@ -158,7 +161,10 @@ $(document).ready(function () {
   //};
 //});
 >>>>>>> main
+<<<<<<< HEAD
 
+=======
+>>>>>>> e3648837e742a247bfff0790f191059708538fe5
 
 // JS for Dynamic Questions - Need to Fix this
 
