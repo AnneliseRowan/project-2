@@ -91,14 +91,8 @@ hr {
   background-repeat: repeat
 }
 
-<<<<<<< HEAD
 #loggedIn, p, h3 {
   color: black;
-=======
-#loggedIn, h3 {
-  color: rgba(255, 255, 255, 0.781);
->>>>>>> d05d634e505cfb506797318b6dde8ff794552b2d
-}
 
 .cardcontainer {
   width: 350px;
@@ -295,8 +289,6 @@ text-overflow: ellipsis;
 transition: all 0.2s ease;
 outline: none;
 } 
-
-
 
 /* h1 {
 color: rgba(255, 122, 122, 1);

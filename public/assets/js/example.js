@@ -103,6 +103,7 @@ $exampleList.on('click', '.delete', handleDeleteBtnClick);
 
 // eslint-disable-next-line new-cap
 // this works even if it is underlined lol
+
 const autoCompleteJS = new autoComplete({
   data: {
     src: [
@@ -377,20 +378,4 @@ autoCompleteJS.input.addEventListener('selection', function (event) {
   // Console log autoComplete data feedback
   console.log(feedback);
   console.log(feedback.selection.value);
-});
-document.querySelector('.toggler').addEventListener('click', () => {
-  // Holds the toggle button selection/alignment
-  const toggle = document.querySelector('.toggle').style.justifyContent;
-
-  if (toggle === 'flex-start' || toggle === '') {
-    // Set Search Engine mode to Loose
-    document.querySelector('.toggle').style.justifyContent = 'flex-end';
-    document.querySelector('.toggler').innerHTML = 'Loose';
-    autoCompleteJS.searchEngine = 'loose';
-  } else {
-    // Set Search Engine mode to Strict
-    document.querySelector('.toggle').style.justifyContent = 'flex-start';
-    document.querySelector('.toggler').innerHTML = 'Strict';
-    autoCompleteJS.searchEngine = 'strict';
-  }
 });
