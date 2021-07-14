@@ -4,43 +4,7 @@
 <div class="row py-5 px-4 mt-3 mb-3">
 
 <div class="row py-5 px-4">
-
-    <div class="col-md-5 mx-auto">
-        <!-- Profile widget -->
-        <div class="bg-white shadow rounded overflow-hidden">
-            <div class="px-4 pt-0 pb-4 cover">
-                <div class="media align-items-end profile-head">
-                    <div class="profile mr-3"><img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" alt="..." width="130" class="rounded mb-2 img-thumbnail"><a href="#" class="btn btn-outline-dark btn-sm btn-block">Edit profile</a></div>
-                    <div class="media-body mb-5 text-white">
-                        <h4 class="mt-0 mb-0">{{userInfo.firstName}}</h4>
-                        <span id="userId" data-currentId="{{userInfo.id}}"></span>
-                        <p class="small mb-4"> <i class="fas fa-map-marker-alt mr-2"></i></p>
-                    </div>
-                </div>
-            </div>
-            <div class="bg-light p-4 d-flex justify-content-end text-center">
-                <ul class="list-inline mb-0">
-                    <li class="list-inline-item">
-                        <h5 class="font-weight-bold mb-0 d-block">745</h5><small class="text-muted"> <i class="fas fa-user mr-1"></i>Followers</small>
-                    </li>
-                    <li class="list-inline-item">
-                        <h5 class="font-weight-bold mb-0 d-block">340</h5><small class="text-muted"> <i class="fas fa-user mr-1"></i>Following</small>
-                    </li>
-                </ul>
-            </div>
-            <div class="py-4 px-4">
-                <div class="d-flex align-items-center justify-content-between mb-3">
-                    <h5 class="mb-0">Recent Books</h5><a href="#" class="btn btn-link">Show all</a>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6 mb-2 pr-lg-1"><img src="https://images.unsplash.com/photo-1469594292607-7bd90f8d3ba4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="" class="img-fluid rounded shadow-sm"></div>
-                    <div class="col-lg-6 mb-2 pl-lg-1"><img src="https://images.unsplash.com/photo-1493571716545-b559a19edd14?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="" class="img-fluid rounded shadow-sm"></div>
-                    <div class="col-lg-6 pr-lg-1 mb-2"><img src="https://images.unsplash.com/photo-1453791052107-5c843da62d97?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80" alt="" class="img-fluid rounded shadow-sm"></div>
-                    <div class="col-lg-6 pl-lg-1"><img src="https://images.unsplash.com/photo-1475724017904-b712052c192a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="" class="img-fluid rounded shadow-sm"></div>
-                </div>
-            </div>
-
-  <div class="col-md-5 mx-auto">
+  <div class="col-md-9 mx-auto">
     <!-- Profile widget -->
     <div class="bg-white shadow rounded overflow-hidden">
       <div class="px-4 pt-0 pb-4 cover">
@@ -53,7 +17,6 @@
             <h4 class="mt-0 mb-0">{{userInfo.firstName}}</h4>
             <p class="small mb-4"> <i class="fas fa-map-marker-alt mr-2"></i></p>
           </div>
-
         </div>
       </div>
       <div class="bg-light p-4 d-flex justify-content-end text-center">
@@ -92,9 +55,38 @@
       <div class="col-8 offset-2">
         <h2>{{msg}}</h2>
         <header align="center" class="header-wrap">
+          <h3>Suggested Users:</h3>
+        </header>
+        {{!-- <form class="clearfix mb-4" action="GET">
+            <div class="body" align="center">
+              <div class="autoComplete_wrapper form-outline w-100">
+                <input style="height: 58px; width: 436px" id="autoComplete" type="text" tabindex="1">
+              </div>
+              <div class="selectionFirst"></div>
+            </div>  
+        </form> --}}
+        {{!-- <ul id="example-list" class="list-group">
+          {{#each examples}}
+          <li data-id="{{this.id}}" class="list-group-item">
+            <a href="example/{{this.id}}">{{this.text}}</a>
+            <button class="btn btn-danger float-right delete">ｘ</button>
+          </li>
+          {{/each}}
+        </ul> --}}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mb-4" id="home">
+  <div class="container">
+    <div class="row">
+      <div class="col-8 offset-2">
+        <h2>{{msg}}</h2>
+        <header align="center" class="header-wrap">
           <h3>Currently Reading:</h3>
         </header>
-        <form class="clearfix" action="POST">
+        <form class="clearfix mb-4" action="POST">
             <div class="body" align="center">
               <div class="autoComplete_wrapper form-outline w-100">
                 <input style="height: 58px; width: 436px" id="autoComplete" type="text" tabindex="1">
@@ -140,16 +132,7 @@
 {{!-- <script src="/assets/js/example.js"></script> --}}
 {{!-- <script src="/assets/js/profile.js"></script> --}}
 
-
-
-
 {{> modal/login-block}}
-
-
-
-
-{{> modal/login-block}}
-
 
 <div class="container">
   <header align="center" class="header-wrap">
@@ -226,11 +209,14 @@
   </div>
   <!-- Footer -->
 {{!-- <footer class="page-footer font-small purple darken-3">
+<<<<<<< HEAD
 
 
 
 
 
+=======
+>>>>>>> bfaba7d4bc8b022cf014d5b474e01204b000a703
   <!-- Footer Elements -->
   <div class="container">
     <!-- Grid row-->
@@ -270,7 +256,6 @@
   </div>
   <!-- Footer Elements -->
 
-
   <!-- Copyright -->
   <div class="footer-copyright text-center py-3">© 2021 Copyright:
     <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
@@ -281,9 +266,13 @@
 <!-- Footer -->
 </div>
 
+<<<<<<< HEAD
 
 
         <script src="/assets/js/profile.js"></script>
         <script src="/public/assets/js/getBooks.js"></script>
 
 
+=======
+        
+>>>>>>> bfaba7d4bc8b022cf014d5b474e01204b000a703
