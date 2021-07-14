@@ -142,15 +142,6 @@ $(document).ready(function () {
 =======
 =======
 
-
-
-$(document).ready(function () {
-  document.getElementById('heart').onclick = function () {
-    document.querySelector('.fa-gratip+3.ay').style.color = '#E74C3C';
-  };
-});
-
-
 // move this to example.handlebar
 //$(document).ready(function () {
  // document.getElementById('heart').onclick = function () {
@@ -158,7 +149,6 @@ $(document).ready(function () {
   //};
 //});
 >>>>>>> main
-
 
 // JS for Dynamic Questions - Need to Fix this
 
@@ -193,8 +183,4 @@ $(document).ready(function () {
 // };
 
 // $('#surveyElement').Survey({model: survey});
-<<<<<<< HEAD
->>>>>>> main
-=======
-
 >>>>>>> main

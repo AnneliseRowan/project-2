@@ -100,29 +100,14 @@ $submitBtn.on('click', handleFormSubmit);
 $exampleList.on('click', '.delete', handleDeleteBtnClick);
 
 // the autofill
-// added this to try and return book data for autopopulate
 
-const getBooks = (data) => {
-  return $.ajax({
-    url: 'api/books',
-    type: 'GET',
-    data: JSON.parse(data)
-  });
-};
-const getMore = () => {
-  const books = getBooks();
-  const bookArray = [];
-  books.forEach(book => {
-    bookArray.push(book.title);
-  });
-  return bookArray;
-};
 // eslint-disable-next-line new-cap
 // this works even if it is underlined lol
 
 const autoCompleteJS = new autoComplete({
   data: {
-    src: ['To Kill a Mockingbird - Harper Lee',
+    src: [
+      'To Kill a Mockingbird - Harper Lee',
       '1984 - George Orwell',
       'Pride and Prejudice - Jane Austen',
       'Animal Farm - George Orwell',
@@ -346,7 +331,6 @@ const autoCompleteJS = new autoComplete({
   placeHolder: '            Search for Book Titles and Authors!',
   resultsList: {
     element: (list, data) => {
-      console.log('are we in here?');
       const info = document.createElement('p');
       if (data.results.length > 0) {
         info.innerHTML = `Displaying <strong>${data.results.length}</strong> out of <strong>${data.matches.length}</strong> results`;
