@@ -102,21 +102,37 @@ $exampleList.on('click', '.delete', handleDeleteBtnClick);
 // the autofill
 // added this to try and return book data for autopopulate
 
-const getBooks = (data) => {
+// const getBooks = (data) => {
+//   return $.ajax({
+//     url: 'api/books',
+//     type: 'GET',
+//     data: JSON.parse(data)
+//   });
+// };
+// const getMore = () => {
+//   const books = getBooks();
+//   const bookArray = [];
+//   books.forEach(book => {
+//     bookArray.push(book.title);
+//   });
+//   return bookArray;
+// };
+
+const getBooks = () => {
   return $.ajax({
     url: 'api/books',
-    type: 'GET',
-    data: JSON.parse(data)
+    type: 'GET'
+  }).then(function (data) {
+    const booksArray = [];
+    for (let index = 0; index < data.length; index++) {
+      const titles = data[index].title;
+      const authors = data[index].author;
+      console.log('TITLES AND AUTHORS', titles + authors);
+    }
+    // console.log(`${data[0].title} - ${data[0].author}`);
   });
 };
-const getMore = () => {
-  const books = getBooks();
-  const bookArray = [];
-  books.forEach(book => {
-    bookArray.push(book.title);
-  });
-  return bookArray;
-};
+getBooks();
 // eslint-disable-next-line new-cap
 // this works even if it is underlined lol
 
