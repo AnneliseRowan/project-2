@@ -132,11 +132,13 @@ $('#login').on('click', function (event) {
 });
 
 // this is for book card
-$(document).ready(function () {
-  document.getElementById('heart').onclick = function () {
-    document.querySelector('.fa-gratip+3.ay').style.color = '#E74C3C';
-  };
-});
+
+// move this to example.handlebar
+//$(document).ready(function () {
+ // document.getElementById('heart').onclick = function () {
+  //  document.querySelector('.fa-gratip+3.ay').style.color = '#E74C3C';
+  //};
+//});
 
 // JS for Dynamic Questions - Need to Fix this
 

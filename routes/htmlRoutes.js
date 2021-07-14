@@ -1,4 +1,5 @@
 const router = require('express').Router();
+// const book = require('../models/book');
 
 module.exports = (db) => {
   // Load register page
@@ -30,7 +31,6 @@ module.exports = (db) => {
           userInfo: req.session.passport.user,
           isloggedin: req.isAuthenticated()
         };
-
 
         res.render('profile', user);
       });
@@ -105,6 +105,13 @@ module.exports = (db) => {
       }
       res.clearCookie('connect.sid', { path: '/' });
       res.redirect('/');
+    });
+  });
+
+  // render all books in database
+  router.get('/allbooks', function (req, res) {
+    db.Book.findAll().then(function (Book) {
+      res.render('all-books', { books: Book });
     });
   });
 

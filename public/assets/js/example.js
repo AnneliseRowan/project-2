@@ -336,7 +336,6 @@ const autoCompleteJS = new autoComplete({
         info.innerHTML = `Displaying <strong>${data.results.length}</strong> out of <strong>${data.matches.length}</strong> results`;
       } else {
         info.innerHTML = `Found <strong>${data.matches.length}</strong> matching results for <strong>"${data.query}"</strong>`;
-        console.log(data.query);
       }
       list.prepend(info);
     },
