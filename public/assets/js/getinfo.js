@@ -2,13 +2,13 @@ const API = {
   getOneUserLibrary: function (example) {
     return $.ajax({
       type: 'GET',
-      url: 'api/jon/book/:id',
+      url: 'api/jon/book/',
       data: JSON.stringify(example)
     });
   },
-  getOneRead: function () {
+  getOneRead: function (id) {
     return $.ajax({
-      url: 'api/jon/read/',
+      url: 'api/jon/read/' + id,
       type: 'GET'
     });
   },
@@ -21,14 +21,16 @@ const API = {
 };
 
 const getInfo = function () {
-  API.getOneUserLibrary().then(function (data1) {
+  console.log(window.userId, 'userid');
+  const currentUserId = document.getElementById('userId').getAttribute('data-currentId');
+  console.log(currentUserId, 'currentUserId');
+  API.getOneUserLibrary(currentUserId).then(function (data1) {
     console.log('data1:', data1);
     // return;
   });
-  API.getOneRead().then(function (data2) {
+  API.getOneRead(currentUserId).then(function (data2) {
     console.log('data2:', data2);
     // return;
   });
 };
-
 getInfo();
