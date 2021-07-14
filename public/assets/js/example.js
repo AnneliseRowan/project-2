@@ -366,6 +366,19 @@ const autoCompleteJS = new autoComplete({
     }
   }
 });
+autoCompleteJS.input.addEventListener('selectionFirst', function (event) {
+  const feedback = event.detail;
+  autoCompleteJS.input.blur();
+  // Prepare User's Selected Value
+  const selectionFirst = feedback.selectionFirst.value;
+  // Render selected choice to selection div
+  document.querySelector('.selectionFirst').innerHTML = selectionFirst;
+  // Replace Input value with the selected value
+  autoCompleteJS.input.value = selectionFirst;
+  // Console log autoComplete data feedback
+  console.log(feedback);
+  console.log(feedback.selectionFirst.value);
+});
 autoCompleteJS.input.addEventListener('selection', function (event) {
   const feedback = event.detail;
   autoCompleteJS.input.blur();

@@ -45,12 +45,39 @@
     </div>
 </div>
 
+<div class="mb-4" id="home">
+  <div class="container">
+    <div class="row">
+      <div class="col-8 offset-2">
+        <h2>{{msg}}</h2>
+        <h4 class="centering">Currently Reading:</h4>
+        <form class="clearfix mb-4" action="POST">
+            <div class="body" align="center">
+              <div class="autoComplete_wrapper form-outline w-100">
+                <input style="height: 58px; width: 436px" id="autoComplete" type="text" tabindex="1">
+              </div>
+              <div class="selectionFirst"></div>
+            </div>  
+        </form>
+        <ul id="example-list" class="list-group">
+          {{#each examples}}
+          <li data-id="{{this.id}}" class="list-group-item">
+            <a href="example/{{this.id}}">{{this.text}}</a>
+            <button class="btn btn-danger float-right delete">ｘ</button>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div id="home">
   <div class="container">
     <div class="row">
       <div class="col-8 offset-2">
         <h2>{{msg}}</h2>
-        <h4>Find Your Top 3 Favorite Books:</h4>
+        <h4 class="centering">Find Your Top 3 Favorite Books:</h4>
         <form class="clearfix mb-4" action="POST">
             <div class="body" align="center">
               <div class="autoComplete_wrapper form-outline w-100">
@@ -83,7 +110,7 @@
   <header align="center" class="header-wrap">
     <h3>View or update your user</h3>
     <div class="userId">
-      <h3>Welcome, {{userInfo.firstName}}</h3>
+      {{!-- <h3>Welcome, {{userInfo.firstName}}</h3> --}}
       <h5 id="user-number" data-useremail="{{userInfo.email}}">Account email: {{userInfo.email}}</h5>
     </div>
     <h3 id="update-err-msg"></h3>
@@ -153,7 +180,7 @@
     </div>
   </div>
   <!-- Footer -->
-<footer class="page-footer font-small purple darken-3">
+{{!-- <footer class="page-footer font-small purple darken-3">
 
   <!-- Footer Elements -->
   <div class="container">
@@ -187,7 +214,7 @@
           <a class="pin-ic">
             <i class="fab fa-pinterest fa-lg white-text fa-2x"> </i>
           </a> 
-      </div>
+      </div> --}}
       <!-- Grid column -->
 
     </div>

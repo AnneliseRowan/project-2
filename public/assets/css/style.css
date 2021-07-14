@@ -304,6 +304,9 @@ h1 > a::selection {
 color: rgb(255, 122, 122);
 } */
 
+.centering {
+  padding-left: 113 px !important; 
+}
 
 .mode {
 margin-bottom: 5px;
