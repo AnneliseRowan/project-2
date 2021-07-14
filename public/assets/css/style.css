@@ -108,6 +108,10 @@ hr {
   color: rgba(255, 255, 255, 0.781);
 }
 
+#loggedIn, h3 {
+  color: rgba(255, 255, 255, 0.781);
+}
+
 /* .cardcontainer {
   width: 350px;
   height: 500px;
