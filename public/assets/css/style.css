@@ -104,10 +104,6 @@ hr {
   color: black;
 }
 
-#loggedIn, h3 {
-  color: rgba(255, 255, 255, 0.781);
-
-
 /* .cardcontainer {
   width: 350px;
   height: 500px;
@@ -256,8 +252,8 @@ img{
   margin-right: 7px
 } */
 
-.form-control{
-  color: #fff
+.form-control {
+  color: #fff;
 }
 
 .fab{

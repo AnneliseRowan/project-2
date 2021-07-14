@@ -132,7 +132,17 @@ $('#login').on('click', function (event) {
 });
 
 // this is for book card
+<<<<<<< HEAD
+$(document).ready(function () {
+  document.getElementById('heart').onclick = function () {
+    document.querySelector('.fa-gratip+3.ay').style.color = '#E74C3C';
+  };
+});
+<<<<<<< HEAD
+=======
+=======
 
+<<<<<<< HEAD
 
 
 $(document).ready(function () {
@@ -142,13 +152,19 @@ $(document).ready(function () {
 });
 
 
+=======
+>>>>>>> e3648837e742a247bfff0790f191059708538fe5
 // move this to example.handlebar
 //$(document).ready(function () {
  // document.getElementById('heart').onclick = function () {
   //  document.querySelector('.fa-gratip+3.ay').style.color = '#E74C3C';
   //};
 //});
+>>>>>>> main
+<<<<<<< HEAD
 
+=======
+>>>>>>> e3648837e742a247bfff0790f191059708538fe5
 
 // JS for Dynamic Questions - Need to Fix this
 
@@ -183,4 +199,8 @@ $(document).ready(function () {
 // };
 
 // $('#surveyElement').Survey({model: survey});
+<<<<<<< HEAD
+>>>>>>> main
+=======
 
+>>>>>>> main
