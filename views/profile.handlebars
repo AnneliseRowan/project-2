@@ -1,8 +1,4 @@
 {{> nav/nav-block user=true register=false}}
-
-
-<div class="row py-5 px-4 mt-3 mb-3">
-
 <div class="row py-5 px-4">
   <div class="col-md-9 mx-auto">
     <!-- Profile widget -->
@@ -48,8 +44,7 @@
   </div>
 </div>
 
-
-<div class="mb-3" id="home">
+<div class="mb-4" id="home">
   <div class="container">
     <div class="row">
       <div class="col-8 offset-2">
@@ -107,13 +102,13 @@
   </div>
 </div>
 
-<div id="home mb-3">
+<div id="home">
   <div class="container">
     <div class="row">
       <div class="col-8 offset-2">
         <h2>{{msg}}</h2>
         <header align="center" class="header-wrap">
-          <h3>Choose Your Top 3 Books:</h3>
+          <h3>Select Top Books:</h3>
         </header>
         <form class="clearfix mb-4" action="POST">
             <div class="body" align="center">
@@ -123,6 +118,14 @@
               <ol class="selection"></ol>
             </div>  
         </form>
+        <ul id="example-list" class="list-group">
+          {{#each examples}}
+          <li data-id="{{this.id}}" class="list-group-item">
+            <a href="example/{{this.id}}">{{this.text}}</a>
+            <button class="btn btn-danger float-right delete">ｘ</button>
+          </li>
+          {{/each}}
+        </ul>
       </div>
     </div>
   </div>
@@ -209,14 +212,6 @@
   </div>
   <!-- Footer -->
 {{!-- <footer class="page-footer font-small purple darken-3">
-<<<<<<< HEAD
-
-
-
-
-
-=======
->>>>>>> bfaba7d4bc8b022cf014d5b474e01204b000a703
   <!-- Footer Elements -->
   <div class="container">
     <!-- Grid row-->
@@ -265,14 +260,3 @@
 </footer>
 <!-- Footer -->
 </div>
-
-<<<<<<< HEAD
-
-
-        <script src="/assets/js/profile.js"></script>
-        <script src="/public/assets/js/getBooks.js"></script>
-
-
-=======
-        
->>>>>>> bfaba7d4bc8b022cf014d5b474e01204b000a703
