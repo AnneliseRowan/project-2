@@ -109,6 +109,7 @@ module.exports = (db) => {
   });
 
   // render all books in database
+
   // router.get('/allbooks', function (req, res) {
   //   db.Book.findAll().then(function (Book) {
   //     res.render('all-books', { books: Book });
@@ -123,7 +124,6 @@ module.exports = (db) => {
     } else {
       res.redirect('/');
     }
-  });
 
   // Render 404 page for any unmatched routes
   router.get('*', function (req, res) {

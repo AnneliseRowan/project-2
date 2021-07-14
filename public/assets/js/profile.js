@@ -20,7 +20,7 @@ const API = {
   },
   getAllOwnedBy: function () {
     return $.ajax({
-      url: 'api/jon/id',
+      url: 'api/jon/user/id',
       type: 'GET'
     });
   },
@@ -39,6 +39,7 @@ const refreshExamples = function () {
       const $a = $('<a>')
         .text(example.Book.title)
         .attr('href', '/example/' + example.id);
+      console.log('this one engaged', data);
 
       const $li = $('<li>')
         .attr({
@@ -77,7 +78,7 @@ const handleFormSubmit = function (event) {
     alert('You must enter an example text and description!');
     return;
   }
-
+  refreshExamples();
   API.saveExample(example).then(function () {
     refreshExamples();
   });
