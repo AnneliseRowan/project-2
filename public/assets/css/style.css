@@ -102,7 +102,14 @@ hr {
 
 #loggedIn, p, h3 {
   color: black;
+<<<<<<< HEAD
+
+#loggedIn, h3 {
+  color: rgba(255, 255, 255, 0.781);
+
+=======
 }
+>>>>>>> bfaba7d4bc8b022cf014d5b474e01204b000a703
 
 /* .cardcontainer {
   width: 350px;
