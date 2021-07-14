@@ -118,6 +118,7 @@ const getBooks = () => {
   });
 };
 
+// eslint-disable-next-line new-cap
 const autoCompleteJS = new autoComplete({
   data: {
     src: getBooks(),
