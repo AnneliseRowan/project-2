@@ -127,7 +127,7 @@ const getBooks = () => {
     for (let index = 0; index < data.length; index++) {
       const titles = data[index].title;
       const authors = data[index].author;
-      console.log('TITLES AND AUTHORS', titles + authors);
+      console.log('TITLES AND AUTHORS', `${titles} - ${authors}`);
     }
     // console.log(`${data[0].title} - ${data[0].author}`);
   });
