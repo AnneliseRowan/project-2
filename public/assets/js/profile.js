@@ -101,7 +101,6 @@ const handleDeleteBtnClick = function () {
 $submitBtn.on('click', handleFormSubmit);
 $exampleList.on('click', '.delete', handleDeleteBtnClick);
 
-
 // the autofill
 // added this to try and return book data for autopopulate
 
@@ -141,7 +140,6 @@ const autoCompleteJS = new autoComplete({
   placeHolder: '            Search for Book Titles and Authors!',
   resultsList: {
     element: (list, data) => {
-      console.log('are we in here?');
       const info = document.createElement('p');
       if (data.results.length > 0) {
         info.innerHTML = `Displaying <strong>${data.results.length}</strong> out of <strong>${data.matches.length}</strong> results`;
@@ -177,19 +175,7 @@ const autoCompleteJS = new autoComplete({
     }
   }
 });
-autoCompleteJS.input.addEventListener('selectionFirst', function (event) {
-  const feedback = event.detail;
-  autoCompleteJS.input.blur();
-  // Prepare User's Selected Value
-  const selectionFirst = feedback.selectionFirst.value;
-  // Render selected choice to selection div
-  document.querySelector('.selectionFirst').innerHTML = selectionFirst;
-  // Replace Input value with the selected value
-  autoCompleteJS.input.value = selectionFirst;
-  // Console log autoComplete data feedback
-  console.log(feedback);
-  console.log(feedback.selectionFirst.value);
-});
+
 autoCompleteJS.input.addEventListener('selection', function (event) {
   const feedback = event.detail;
   autoCompleteJS.input.blur();
