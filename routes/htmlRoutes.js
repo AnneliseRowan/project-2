@@ -116,6 +116,7 @@ module.exports = (db) => {
   //   });
   // });
 
+
   router.get('/allbooks', async (req, res) => {
     if (req.isAuthenticated()) {
       db.Book.findAll().then((Book) => {
@@ -125,6 +126,7 @@ module.exports = (db) => {
       res.redirect('/');
     }
   });
+
 
   // Render 404 page for any unmatched routes
   router.get('*', function (req, res) {
