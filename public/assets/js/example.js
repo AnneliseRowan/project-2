@@ -102,22 +102,6 @@ $exampleList.on('click', '.delete', handleDeleteBtnClick);
 // the autofill
 // added this to try and return book data for autopopulate
 
-// const getBooks = (data) => {
-//   return $.ajax({
-//     url: 'api/books',
-//     type: 'GET',
-//     data: JSON.parse(data)
-//   });
-// };
-// const getMore = () => {
-//   const books = getBooks();
-//   const bookArray = [];
-//   books.forEach(book => {
-//     bookArray.push(book.title);
-//   });
-//   return bookArray;
-// };
-
 const getBooks = () => {
   return $.ajax({
     url: 'api/books',
@@ -129,15 +113,10 @@ const getBooks = () => {
       const authors = data[index].author;
       const titleAndAuthor = `${titles} - ${authors}`;
       booksArray.push(titleAndAuthor);
-      console.log('ARRAY', booksArray);
     }
     return booksArray;
-    // console.log(`${data[0].title} - ${data[0].author}`);
   });
 };
-// getBooks();
-// eslint-disable-next-line new-cap
-// this works even if it is underlined lol
 
 const autoCompleteJS = new autoComplete({
   data: {
