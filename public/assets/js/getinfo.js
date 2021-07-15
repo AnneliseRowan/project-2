@@ -46,6 +46,7 @@ const getInfo = function () {
     console.log('data3:', data3);
     const friend = [];
 
+
     for (let i = 0; i < data3.length; i++) {
       // eslint-disable-next-line eqeqeq
       if (data3[i].UserId != currentUserId) {
@@ -53,6 +54,7 @@ const getInfo = function () {
         console.log('current user id', currentUserId);
 
         friend.push(data3[i]);
+
         const firstName = data3[i].User.firstName;
         const lastName = data3[i].User.lastName;
         const friendId = data3[i].User.id;
@@ -71,6 +73,7 @@ const getInfo = function () {
       // console.log('this my friend[0][User]]', friend[0]['User'][0]);
     };
   }
+
 
     // return;
   );
