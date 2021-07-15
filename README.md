@@ -16,11 +16,26 @@ Follow the Reader is the newest app on the market that allows the user to meet n
 * As a registered user, I want to post my owned books.
 
 ## Live link:
-https://project2-starter-auth.herokuapp.com/
 
-## Requirements:
+* [Follow the Reader](https://follow-the-reader.herokuapp.com/)
 
-* Node.JS
+* [Github Repository](https://github.com/AnneliseRowan/project-2)
+
+## Contributors:
+
+* [James Antley](https://github.com/Jimmant91)
+
+* [Rachael Davis](https://github.com/themetalsaint)
+
+* [Alexis Ligon](https://github.com/alexisligon)
+
+* [Jonathan Nance](https://github.com/speakeasyman)
+
+* [Annélise Rowan](https://github.com/AnneliseRowan)
+
+* [Naomi Valdovinos](https://github.com/Nvaldovinos)
+
+
 
 ```
 Here is the code you will need for the .env file:
