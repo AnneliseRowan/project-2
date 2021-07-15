@@ -6,20 +6,25 @@ Are you a book lover looking for someone to discuss your latest read with? Maybe
 
 Follow the Reader is the newest app on the market that allows the user to meet new people and share a love of books using our app. This app allows the users to looks for other users who have similar tastes in books as well as searching a data base for new books!
 ```
-
-## User Stories
-
-* As a user, I want to see a list of books.
-
-* As a user, I want to be able to create an account.
-
-* As a registered user, I want to post my owned books.
-
 ## Live link:
 
 * [Follow the Reader](https://follow-the-reader.herokuapp.com/)
 
 * [Github Repository](https://github.com/AnneliseRowan/project-2)
+
+## User Stories
+
+* As a user, I want to view the books within the library database.
+
+* As a user, I want to search for books within the library database.
+
+* As a user, I want to view suggested users based on books that are in my library.
+
+* As a user, I want to contact those suggested users.
+
+* As a user, I want to view other user's profiles.
+
+
 
 ## Contributors:
 
