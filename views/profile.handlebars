@@ -11,7 +11,8 @@
               class="btn btn-outline-dark btn-sm btn-block">Edit User</a></div>
           <div class="media-body mb-5 text-white">
             <h4 class="mt-0 mb-0">{{userInfo.firstName}}</h4>
-            <span id="userId" data-currentId="{{userInfo.id}}"></span>
+            <h5 class="mt-0 mb-0">{{userInfo.email}}</h5>
+	    <span id="userId" data-currentId="{{userInfo.id}}"></span>
             <p class="small mb-4"> <i class="fas fa-map-marker-alt mr-2"></i></p>
           </div>
         </div>
@@ -53,7 +54,72 @@
         <header align="center" class="header-wrap">
           <h3>Suggested Users:</h3>
         </header>
-        <div class="friend-card"></div>
+	<div class="friend-card"></div>
+
+
+        {{!-- <form class="clearfix mb-4" action="GET">
+            <div class="body" align="center">
+              <div class="autoComplete_wrapper form-outline w-100">
+                <input style="height: 58px; width: 436px" id="autoComplete" type="text" tabindex="1">
+              </div>
+              <div class="selectionFirst"></div>
+            </div>  
+        </form> --}}
+        {{!-- <ul id="example-list" class="list-group">
+          {{#each examples}}
+          <li data-id="{{this.id}}" class="list-group-item">
+            <a href="example/{{this.id}}">{{this.text}}</a>
+            <button class="btn btn-danger float-right delete">ｘ</button>
+          </li>
+          {{/each}}
+        </ul> --}}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mb-4" id="home">
+  <div class="container">
+    <div class="row">
+      <div class="col-8 offset-2">
+        <h2>{{msg}}</h2>
+        <header align="center" class="header-wrap">
+          <h3>My User Library</h3>
+        </header>
+        <div class="userLib-card"></div>
+
+
+        {{!-- <form class="clearfix mb-4" action="GET">
+            <div class="body" align="center">
+              <div class="autoComplete_wrapper form-outline w-100">
+                <input style="height: 58px; width: 436px" id="autoComplete" type="text" tabindex="1">
+              </div>
+              <div class="selectionFirst"></div>
+            </div>  
+        </form> --}}
+        {{!-- <ul id="example-list" class="list-group">
+          {{#each examples}}
+          <li data-id="{{this.id}}" class="list-group-item">
+            <a href="example/{{this.id}}">{{this.text}}</a>
+            <button class="btn btn-danger float-right delete">ｘ</button>
+          </li>
+          {{/each}}
+        </ul> --}}
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mb-4" id="home">
+  <div class="container">
+    <div class="row">
+      <div class="col-8 offset-2">
+        <h2>{{msg}}</h2>
+        <header align="center" class="header-wrap">
+          <h3>What I'm currently reading</h3>
+        </header>
+        <div class="read-card"></div>
+
 
 
         {{!-- <form class="clearfix mb-4" action="GET">
@@ -136,6 +202,7 @@
 </div>
 
 <script src="/assets/js/getinfo.js"></script>
+
 {{!-- <script src="/assets/js/example.js"></script> --}}
 {{!-- <script src="/assets/js/profile.js"></script> --}}
 
@@ -224,10 +291,8 @@
 
   <!-- Footer Elements -->
   <div class="container">
-
     <!-- Grid row-->
     <div class="row">
-
       <!-- Grid column -->
       <div class="col-md-12 py-5">
           <!-- Facebook -->
