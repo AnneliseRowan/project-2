@@ -1,0 +1,119 @@
+{{> nav/nav-block user=true register=false}}
+<div class="row py-5 px-4 mt-3">
+  <div class="col-md-9 mx-auto" style="margin-bottom: -39px">
+    <!-- Profile widget -->
+    <div class="bg-white shadow rounded overflow-hidden">
+      <div class="px-4 pt-0 pb-4 cover">
+        <div class="media align-items-end profile-head">
+          <div class="profile mr-3"><img
+              src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80"
+              alt="..." width="130" class="rounded mb-2 img-thumbnail"></div>
+          <div class="media-body mb-5 text-white">
+            <h4 class="mt-0 mb-0">{{this.userId.User.firstName}}</h4>
+            <span id="userId" data-currentId="{{userInfo.id}}"></span>
+            <p class="small mb-4"> <i class="fas fa-map-marker-alt mr-2"></i></p>
+          </div>
+        </div>
+      </div>
+      <div class="bg-light p-4 d-flex justify-content-end text-center">
+        <ul class="list-inline mb-0">
+          <li class="list-inline-item">
+            <h5 class="font-weight-bold mb-0 d-block">745</h5><small class="text-muted"> <i
+                class="fas fa-user mr-1"></i>Followers</small>
+          </li>
+          <li class="list-inline-item">
+            <h5 class="font-weight-bold mb-0 d-block">340</h5><small class="text-muted"> <i
+                class="fas fa-user mr-1"></i>Following</small>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="mb-4" id="home">
+  <div class="container">
+    <div class="row">
+      <div class="col-8 offset-2">
+        <h2>{{msg}}</h2>
+        <header align="center" class="header-wrap">
+          <h3>Currently Reading:</h3>
+        </header>
+        <form class="clearfix mb-4" action="POST">
+            <div class="body" align="center">
+              <div class="autoComplete_wrapper form-outline w-100">
+                <input style="height: 58px; width: 436px" id="autoComplete" class="validate" type="search" tabindex="1">
+              </div>
+        </form>
+        <ul id="example-list" class="list-group">
+          {{#each examples}}
+          <li data-id="{{this.id}}" class="list-group-item">
+            <a href="example/{{this.id}}">{{this.text}}</a>
+            <button class="btn btn-danger float-right delete">ｘ</button>
+          </li>
+          {{/each}}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<script src="/assets/js/getinfo.js"></script>
+{{!-- <script src="/assets/js/example.js"></script> --}}
+{{!-- <script src="/assets/js/profile.js"></script> --}}
+
+{{> modal/login-block}}
+
+  <!-- Footer -->
+<footer class="page-footer font-small purple darken-3">
+
+
+  <!-- Footer Elements -->
+  <div class="container">
+
+    <!-- Grid row-->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-12 py-5">
+          <!-- GitHub -->
+          <a class="fb-ic">
+            <i class="fab fa-github fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!-- Twitter -->
+          <a class="tw-ic">
+            <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!--Linkedin -->
+          <a class="li-ic">
+            <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+          <!--Instagram-->
+          <a class="ins-ic">
+            <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+          </a>
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row-->
+
+  </div>
+  <!-- Footer Elements -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3">© 2021 Copyright:
+    <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+</div>
+
+        <script src="/assets/js/profile.js"></script>
+        <script src="/public/assets/js/getBooks.js"></script>
+
