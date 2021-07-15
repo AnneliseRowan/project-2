@@ -40,7 +40,7 @@ const getInfo = function () {
       const bookAuthor = data1[i].Book.author;
       const bookId = data1[i].Book.id;
 
-      $('.userLib-card').append(`<div class="card border-info mb-3 mx-auto" style="max-width: 18rem;">
+      $('.userLib-card').append(`<div class="card border-light mb-3 mx-auto" style="max-width: 18rem;">
       <a href=localhost:3335/book/${bookId}>
       
       <div class="card-body" id="${bookId}>
@@ -58,7 +58,7 @@ const getInfo = function () {
       const bookAuthor = data2[i].Book.author;
       const bookId = data2[i].Book.id;
 
-      $('.read-card').append(`<div class="card border-info mb-3 mx-auto" style="max-width: 18rem;">
+      $('.read-card').append(`<div class="card border-light mb-3 mx-auto" style="max-width: 18rem;">
       <a href=localhost:3335/book/${bookId}>
       
       <div class="card-body" id="${bookId}>
@@ -89,7 +89,7 @@ const getInfo = function () {
       const firstName = uniqueFriendFirst[j];
       // const lastName = uniqueFriendLast[j];
       const friendId = uniqueFriendId[j];
-      $('.friend-card').append(`<div class="card border-info mb-3 mx-auto" style="max-width: 18rem;">
+      $('.friend-card').append(`<div class="card border-light mb-3 mx-auto" style="max-width: 18rem;">
           <a href=localhost:3335/friend/${friendId}>
         
           <div class="card-body" id="${friendId}>
