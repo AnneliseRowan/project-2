@@ -18,6 +18,16 @@ const API = {
       data: JSON.stringify(example)
     });
   },
+  saveNewUserBook: function (newUserBook) {
+    return $.ajax({
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      type: 'POST',
+      url: 'api/jon',
+      data: JSON.stringify(newUserBook)
+    });
+  },
   getAllOwnedBy: function () {
     return $.ajax({
       url: 'api/jon/user/id',
@@ -120,8 +130,14 @@ const getBooks = () => {
   });
 };
 
-const addBook = () => {
-  // Jon's workspace for trying to create a fancy post route
+const getBooks2 = (res, rej) => {
+  return $.ajax({
+    url: 'api/books',
+    type: 'GET'
+  }).then(function (dataBook) {
+    // console.log(dataBook);
+    return dataBook;
+  });
 };
 
 const autoCompleteJS = new autoComplete({
@@ -191,4 +207,19 @@ autoCompleteJS.input.addEventListener('selection', function (event) {
   // Console log autoComplete data feedback
   console.log(feedback);
   console.log(feedback.selection.value);
+  const token = feedback.selection.value;
+  const splittoken = token.split(' -')[0];
+  getBooks2().then((bookData) => {
+    const result = bookData.find(({ title }) => title === splittoken);
+    const currentUserId2 = document.getElementById('userId').getAttribute('data-currentId');
+    const intCurrentUserId = parseInt(currentUserId2);
+    const newUserBook = {
+      BookId: result.id,
+      UserId: intCurrentUserId,
+      current_reading: true
+    };
+    API.saveNewUserBook(newUserBook).then(function () {
+      location.reload();
+    });
+  });
 });
