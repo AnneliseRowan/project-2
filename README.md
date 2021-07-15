@@ -24,6 +24,25 @@ Follow the Reader is the newest app on the market that allows the user to meet n
 
 * As a user, I want to view other user's profiles.
 
+## Technology Used
+
+```
+Sequlize
+
+MySql
+
+Node.js
+
+Express.js
+
+Handlebars.js
+
+Heroku
+
+Autocomplete.js
+
+```
+
 
 ## Contributors:
 
@@ -38,19 +57,3 @@ Follow the Reader is the newest app on the market that allows the user to meet n
 * [Annélise Rowan](https://github.com/AnneliseRowan)
 
 * [Naomi Valdovinos](https://github.com/Nvaldovinos)
-
-
-
-```
-Here is the code you will need for the .env file:
-
-SEQUELIZE_USER=your_mysql_db_user
-SEQUELIZE_PASSWORD=your_mysql_db_password
-SEQUELIZE_HOST=your_mysql_db_host
-AUTH_SECRET=your_auth_secret_key
-ADMIN_USER_PWD=admin_password
-USER_PWD=user_pwd
-FORCE_SYNC=true_or_false
-TU=mysql_user
-TP=mysql_password
-```
