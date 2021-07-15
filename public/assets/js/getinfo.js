@@ -53,6 +53,7 @@ const getInfo = function () {
         // consolelog('friendX', friend[i]);
       };
     }
+
     // return;
   });
 };
