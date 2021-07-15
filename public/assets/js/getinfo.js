@@ -29,12 +29,10 @@ const API2 = {
 };
 
 const getInfo = function () {
-
   // console.log(window.userId, 'userid');
 
   const currentUserId = document.getElementById('userId').getAttribute('data-currentId');
   API2.getAllOwnedBy(currentUserId).then(function (data1) {
-
     console.log('data1', data1);
 
     for (let i = 0; i < data1.length; i++) {
@@ -42,7 +40,7 @@ const getInfo = function () {
       const bookAuthor = data1[i].Book.author;
       const bookId = data1[i].Book.id;
 
-      $('.userLib-card').append(`<div class="card border-info mb-3 mx-auto" style="max-width: 18rem;">
+      $('.userLib-card').append(`<div class="card border-light mb-3 mx-auto" style="max-width: 18rem;">
       <a href=localhost:3335/book/${bookId}>
       
       <div class="card-body" id="${bookId}>
@@ -54,14 +52,13 @@ const getInfo = function () {
     }
   });
 
-
   API2.getOneRead(currentUserId).then(function (data2) {
     for (let i = 0; i < data2.length; i++) {
       const bookTitle = data2[i].Book.title;
       const bookAuthor = data2[i].Book.author;
       const bookId = data2[i].Book.id;
 
-      $('.read-card').append(`<div class="card border-info mb-3 mx-auto" style="max-width: 18rem;">
+      $('.read-card').append(`<div class="card border-light mb-3 mx-auto" style="max-width: 18rem;">
       <a href=localhost:3335/book/${bookId}>
       
       <div class="card-body" id="${bookId}>
@@ -71,7 +68,6 @@ const getInfo = function () {
       </a>    
         </div>`);
     }
-
   });
 
   API2.getAllRead().then(function (data3) {
@@ -93,7 +89,7 @@ const getInfo = function () {
       const firstName = uniqueFriendFirst[j];
       // const lastName = uniqueFriendLast[j];
       const friendId = uniqueFriendId[j];
-      $('.friend-card').append(`<div class="card border-info mb-3 mx-auto" style="max-width: 18rem;">
+      $('.friend-card').append(`<div class="card border-light mb-3 mx-auto" style="max-width: 18rem;">
           <a href=localhost:3335/friend/${friendId}>
         
           <div class="card-body" id="${friendId}>
