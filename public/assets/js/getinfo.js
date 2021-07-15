@@ -31,6 +31,7 @@ const API2 = {
 const getInfo = function () {
   const currentUserId = document.getElementById('userId').getAttribute('data-currentId');
   API2.getAllOwnedBy(currentUserId).then(function (data1) {
+
     console.log('data1[0].Book:', data1[0].Book);
 
     for (let i = 0; i < data1.length; i++) {
@@ -66,6 +67,7 @@ const getInfo = function () {
       </a>    
         </div>`);
     }
+
   });
 
   API2.getAllRead().then(function (data3) {
