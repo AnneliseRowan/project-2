@@ -24,6 +24,26 @@ Follow the Reader is the newest app on the market that allows the user to meet n
 
 * As a user, I want to view other user's profiles.
 
+## DEMO
+
+![landing-page](./images/1-landing-page.png)
+
+![login-modal](./images/2-login-modal.png)
+
+![nav-bar](./images/3-nav-bar.png)
+
+![library-database](./images/4-library-database.png)
+
+![profile-page](./images/5-profile.png)
+
+![user-library](./images/6-user-library.png)
+
+![currently-reading](./images/7-currently-reading.png)
+
+![update-profile](./images/8-update-profile.png)
+
+
+
 ## Technology Used
 
 ```
