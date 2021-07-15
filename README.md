@@ -12,6 +12,8 @@ Follow the Reader is the newest app on the market that allows the user to meet n
 
 * [Github Repository](https://github.com/AnneliseRowan/project-2)
 
+* [PowerPoint Presentation](https://docs.google.com/presentation/d/1cCmq_xqrjPoKTD3H3EaZNihGRk11GQxBi69MR3LyOp4/edit?usp=sharing)
+
 ## User Stories
 
 * As a user, I want to view the books within the library database.
