@@ -198,7 +198,9 @@ module.exports = function (db) {
           book_read: req.body.book_read,
           hardcopy: req.body.book_read,
           current_reading: req.body.current_reading,
-          top_3: req.body.top_3
+          top_3: req.body.top_3,
+          BookId: req.body.BookId,
+          UserId: req.body.UserId
         });
         res.status(200).json(newUserLibraryData);
       } catch (err) {
