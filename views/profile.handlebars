@@ -1,6 +1,6 @@
 {{> nav/nav-block user=true register=false}}
-<div class="row py-5 px-4">
-  <div class="col-md-9 mx-auto">
+<div class="row py-5 px-4 mt-3">
+  <div class="col-md-9 mx-auto" style="margin-bottom: -39px">
     <!-- Profile widget -->
     <div class="bg-white shadow rounded overflow-hidden">
       <div class="px-4 pt-0 pb-4 cover">
@@ -11,6 +11,7 @@
               class="btn btn-outline-dark btn-sm btn-block">Edit User</a></div>
           <div class="media-body mb-5 text-white">
             <h4 class="mt-0 mb-0">{{userInfo.firstName}}</h4>
+            <span id="userId" data-currentId="{{userInfo.id}}"></span>
             <p class="small mb-4"> <i class="fas fa-map-marker-alt mr-2"></i></p>
           </div>
         </div>
@@ -52,6 +53,9 @@
         <header align="center" class="header-wrap">
           <h3>Suggested Users:</h3>
         </header>
+        <div class="friend-card"></div>
+
+
         {{!-- <form class="clearfix mb-4" action="GET">
             <div class="body" align="center">
               <div class="autoComplete_wrapper form-outline w-100">
@@ -84,10 +88,10 @@
         <form class="clearfix mb-4" action="POST">
             <div class="body" align="center">
               <div class="autoComplete_wrapper form-outline w-100">
-                <input style="height: 58px; width: 436px" id="autoComplete" type="text" tabindex="1">
+                <input style="height: 58px; width: 436px" id="autoComplete" class="validate" type="search" tabindex="1">
               </div>
-              <div class="selectionFirst"></div>
-            </div>  
+              {{!-- <div class="selectionFirst"></div>
+            </div>   --}}
         </form>
         <ul id="example-list" class="list-group">
           {{#each examples}}
@@ -107,15 +111,15 @@
     <div class="row">
       <div class="col-8 offset-2">
         <h2>{{msg}}</h2>
-        <header align="center" class="header-wrap">
+        {{!-- <header align="center" class="header-wrap">
           <h3>Select Top Books:</h3>
         </header>
         <form class="clearfix mb-4" action="POST">
             <div class="body" align="center">
               <div class="autoComplete_wrapper form-outline w-100">
                 <input style="height: 58px; width: 436px" id="autoComplete" type="text" tabindex="1">
-              </div> 
-              <ol class="selection"></ol>
+              </div>  --}}
+              <h3  align="center" class="selection header-wrap"></h3>
             </div>  
         </form>
         <ul id="example-list" class="list-group">
@@ -152,22 +156,22 @@
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="inputFirst">First Name</label>
-        <input type="text" class="form-control" id="inputFirst" value="{{userInfo.firstName}}" placeholder="John">
+        <input style="color:white" type="text" class="form-control" id="inputFirst" value="{{userInfo.firstName}}" placeholder="John">
       </div>
       <div class="form-group col-md-6">
         <label for="inputLast">Last Name</label>
-        <input type="text" class="form-control" id="inputLast" value="{{userInfo.lastName}}" placeholder="Doe">
+        <input style="color:white" type="text" class="form-control" id="inputLast" value="{{userInfo.lastName}}" placeholder="Doe">
       </div>
     </div>
 
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="inputPassword">Email</label>
-        <input type="text" class="form-control" id="inputEmail" value="{{userInfo.email}}">
+        <input style="color:white" type="text" class="form-control" id="inputEmail" value="{{userInfo.email}}">
       </div>
       <div class="form-group col-md-6">
         <label for="inputPassword">Password</label>
-        <input type="password" class="form-control" id="inputPassword" value="{{userInfo.password}}">
+        <input style="white" type="password" class="form-control" id="inputPassword" value="{{userInfo.password}}">
       </div>
     </div>
 
@@ -220,8 +224,10 @@
 
   <!-- Footer Elements -->
   <div class="container">
+
     <!-- Grid row-->
     <div class="row">
+
       <!-- Grid column -->
       <div class="col-md-12 py-5">
           <!-- Facebook -->
