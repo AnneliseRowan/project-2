@@ -193,8 +193,14 @@ module.exports = function (db) {
     createEntry: async (req, res) => {
       try {
         const newUserLibraryData = await db.UserLibrary.create({
-          title: req.body.title,
-          author: req.body.author
+          book_id: req.body.title,
+          user_id: req.body.author,
+          book_read: req.body.book_read,
+          hardcopy: req.body.book_read,
+          current_reading: req.body.current_reading,
+          top_3: req.body.top_3,
+          BookId: req.body.BookId,
+          UserId: req.body.UserId
         });
         res.status(200).json(newUserLibraryData);
       } catch (err) {
