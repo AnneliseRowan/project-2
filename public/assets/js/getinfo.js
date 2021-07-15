@@ -55,6 +55,7 @@ const getInfo = function () {
       };
       // console.log('this my friend[0][User]]', friend[0]['User'][0]);
     }
+
     // return;
   });
 };
