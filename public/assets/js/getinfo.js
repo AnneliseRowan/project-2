@@ -31,9 +31,41 @@ const API2 = {
 const getInfo = function () {
   const currentUserId = document.getElementById('userId').getAttribute('data-currentId');
   API2.getAllOwnedBy(currentUserId).then(function (data1) {
+    console.log('data1[0].Book:', data1[0].Book);
+
+    for (let i = 0; i < data1.length; i++) {
+      const bookTitle = data1[i].Book.title;
+      const bookAuthor = data1[i].Book.author;
+      const bookId = data1[i].Book.id;
+
+      $('.userLib-card').append(`<div class="card border-info mb-3 mx-auto" style="max-width: 18rem;">
+      <a href=localhost:3335/book/${bookId}>
+      
+      <div class="card-body" id="${bookId}>
+      <h5 class="card-title"  </h5>
+      <h6 class="card-text"> ${bookTitle} by: ${bookAuthor} </h6>
+      </div>
+      </a>    
+        </div>`);
+    }
   });
 
   API2.getOneRead(currentUserId).then(function (data2) {
+    for (let i = 0; i < data2.length; i++) {
+      const bookTitle = data2[i].Book.title;
+      const bookAuthor = data2[i].Book.author;
+      const bookId = data2[i].Book.id;
+
+      $('.read-card').append(`<div class="card border-info mb-3 mx-auto" style="max-width: 18rem;">
+      <a href=localhost:3335/book/${bookId}>
+      
+      <div class="card-body" id="${bookId}>
+      <h5 class="card-title"  </h5>
+      <h6 class="card-text"> ${bookTitle} by: ${bookAuthor} </h6>
+      </div>
+      </a>    
+        </div>`);
+    }
   });
 
   API2.getAllRead().then(function (data3) {
