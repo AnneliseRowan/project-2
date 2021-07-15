@@ -6,7 +6,7 @@ Are you a book lover looking for someone to discuss your latest read with? Maybe
 
 Follow the Reader is the newest app on the market that allows the user to meet new people and share a love of books using our app. This app allows the users to looks for other users who have similar tastes in books as well as searching a data base for new books!
 ```
-## Live link:
+## Live Link:
 
 * [Follow the Reader](https://follow-the-reader.herokuapp.com/)
 
@@ -23,7 +23,6 @@ Follow the Reader is the newest app on the market that allows the user to meet n
 * As a user, I want to contact those suggested users.
 
 * As a user, I want to view other user's profiles.
-
 
 
 ## Contributors:
