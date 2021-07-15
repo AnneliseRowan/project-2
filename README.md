@@ -63,7 +63,7 @@ Follow the Reader is the newest app on the market that allows the user to meet n
 ## Technology Used
 
 ```
-Sequlize
+Sequelize
 
 MySql
 
