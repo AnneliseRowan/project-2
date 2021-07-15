@@ -29,12 +29,10 @@ const API2 = {
 };
 
 const getInfo = function () {
-
   // console.log(window.userId, 'userid');
 
   const currentUserId = document.getElementById('userId').getAttribute('data-currentId');
   API2.getAllOwnedBy(currentUserId).then(function (data1) {
-
     console.log('data1', data1);
 
     for (let i = 0; i < data1.length; i++) {
@@ -54,7 +52,6 @@ const getInfo = function () {
     }
   });
 
-
   API2.getOneRead(currentUserId).then(function (data2) {
     for (let i = 0; i < data2.length; i++) {
       const bookTitle = data2[i].Book.title;
@@ -71,7 +68,6 @@ const getInfo = function () {
       </a>    
         </div>`);
     }
-
   });
 
   API2.getAllRead().then(function (data3) {
