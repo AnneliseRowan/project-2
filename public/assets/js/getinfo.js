@@ -44,14 +44,22 @@ const getInfo = function () {
 
   API.getAllRead().then(function (data3) {
     console.log('data3:', data3);
-    // const friend = [];
+
+    const friend = [];     
+
     for (let i = 0; i < data3.length; i++) {
       if (data3[i].UserId != currentUserId) {
         console.log('data3[i]', data3[i].UserId);
         console.log('current user id', currentUserId);
-        // let friend + i = JSON.stringify(data3[i]);
-        // consolelog('friendX', friend[i]);
+
+        friend.push(data3[i]);
+        console.log(friend[0].User.firstName, 'this my friend Alexis O-o')
+        console.log(friend[1], 'witchcraft');
       };
+      // console.log('this my friend[0][User]]', friend[0]['User'][0]);
+
+      };
+
     }
 
     // return;
