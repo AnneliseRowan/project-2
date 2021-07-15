@@ -108,18 +108,26 @@ module.exports = (db) => {
     });
   });
 
-  // render all books in database
-  // router.get('/allbooks', function (req, res) {
-  //   db.Book.findAll().then(function (Book) {
-  //     res.render('all-books', { books: Book });
-  //   });
-  // });
-
+  // Find all books
   router.get('/allbooks', function (req, res) {
     if (req.isAuthenticated()) {
       db.Book.findAll().then(function (bookData) {
         res.render('all-books', {
           books: bookData,
+          isloggedin: req.isAuthenticated()
+        });
+      });
+    } else {
+      res.redirect('/');
+    }
+  });
+
+  // Find friends by id
+  router.get('/friend/:id', function (req, res) {
+    if (req.isAuthenticated()) {
+      db.UserLibrary.findOne({ where: { UserId: req.params.id } }).then(function (userLibraryData) {
+        res.render('friend-profile', {
+          user: userLibraryData,
           isloggedin: req.isAuthenticated()
         });
       });
