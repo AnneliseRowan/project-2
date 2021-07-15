@@ -26,19 +26,35 @@ Follow the Reader is the newest app on the market that allows the user to meet n
 
 ## DEMO
 
+### This is the landing page of Follow the Reader, before you login.
+
 ![landing-page](./images/1-landing-page.png)
+
+### This is the login modal that will popup when you click login
 
 ![login-modal](./images/2-login-modal.png)
 
+### Once you login, your navigation bar gives you access to other parts of the site including the books library and user profile
+
 ![nav-bar](./images/3-nav-bar.png)
+
+### You can browse the extensive library of books on our app under the books tab
 
 ![library-database](./images/4-library-database.png)
 
+### The user profile page presents with a picture, email, followers, and suggested users based on similar books in your individual libraries
+
 ![profile-page](./images/5-profile.png)
+
+### A list of cards generates for all books the user has read
 
 ![user-library](./images/6-user-library.png)
 
+### A separate list of cards generates for the books the user is currently reading
+
 ![currently-reading](./images/7-currently-reading.png)
+
+### The update profile section is at the bottom of the user's profile
 
 ![update-profile](./images/8-update-profile.png)
 
