@@ -33,19 +33,30 @@ const getInfo = function () {
 
   const currentUserId = document.getElementById('userId').getAttribute('data-currentId');
   API2.getAllOwnedBy(currentUserId).then(function (data1) {
-    console.log('data1', data1);
+    const bookTitle = [];
+    const bookId = [];
+    const bookAuthor = [];
 
     for (let i = 0; i < data1.length; i++) {
-      const bookTitle = data1[i].Book.title;
-      const bookAuthor = data1[i].Book.author;
-      const bookId = data1[i].Book.id;
+      // eslint-disable-next-line eqeqeq
+      bookTitle.push(data1[i].Book.title);
+      bookAuthor.push(data1[i].Book.author);
+      bookId.push(data1[i].Book.id);
+    };
+    const uniqueBookTitle = [...new Set(bookTitle)];
+    const uniqueBookAuthor = [...new Set(bookAuthor)];
+    const uniqueBookId = [...new Set(bookId)];
+    for (let j = 0; j < uniqueBookTitle.length; j++) {
+      const bookTitleJ = uniqueBookTitle[j];
+      const bookAuthorJ = uniqueBookAuthor[j];
+      const bookIdJ = uniqueBookId[j];
 
       $('.userLib-card').append(`<div class="card border-light mb-3 mx-auto" style="max-width: 18rem;">
-      <a href=localhost:3335/book/${bookId}>
+      <a href=localhost:3335/book/${bookIdJ}>
       
-      <div class="card-body" id="${bookId}>
+      <div class="card-body" id="${bookIdJ}>
       <h5 class="card-title"  </h5>
-      <h6 class="card-text"> ${bookTitle} by: ${bookAuthor} </h6>
+      <h6 class="card-text"> ${bookTitleJ} by: ${bookAuthorJ} </h6>
       </div>
       </a>    
         </div>`);
@@ -53,17 +64,29 @@ const getInfo = function () {
   });
 
   API2.getOneRead(currentUserId).then(function (data2) {
-    for (let i = 0; i < data2.length; i++) {
-      const bookTitle = data2[i].Book.title;
-      const bookAuthor = data2[i].Book.author;
-      const bookId = data2[i].Book.id;
+    const bookTitle = [];
+    const bookId = [];
+    const bookAuthor = [];
 
+    for (let i = 0; i < data2.length; i++) {
+      // eslint-disable-next-line eqeqeq
+      bookTitle.push(data2[i].Book.title);
+      bookAuthor.push(data2[i].Book.author);
+      bookId.push(data2[i].Book.id);
+    };
+    const uniqueBookTitle = [...new Set(bookTitle)];
+    const uniqueBookAuthor = [...new Set(bookAuthor)];
+    const uniqueBookId = [...new Set(bookId)];
+    for (let j = 0; j < uniqueBookTitle.length; j++) {
+      const bookTitleJ = uniqueBookTitle[j];
+      const bookAuthorJ = uniqueBookAuthor[j];
+      const bookIdJ = uniqueBookId[j];
       $('.read-card').append(`<div class="card border-light mb-3 mx-auto" style="max-width: 18rem;">
-      <a href=localhost:3335/book/${bookId}>
+      <a href=localhost:3335/book/${bookIdJ}>
       
-      <div class="card-body" id="${bookId}>
+      <div class="card-body" id="${bookIdJ}>
       <h5 class="card-title"  </h5>
-      <h6 class="card-text"> ${bookTitle} by: ${bookAuthor} </h6>
+      <h6 class="card-text"> ${bookTitleJ} by: ${bookAuthorJ} </h6>
       </div>
       </a>    
         </div>`);
