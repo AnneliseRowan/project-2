@@ -29,6 +29,9 @@ const API2 = {
 };
 
 const getInfo = function () {
+
+  // console.log(window.userId, 'userid');
+
   const currentUserId = document.getElementById('userId').getAttribute('data-currentId');
   API2.getAllOwnedBy(currentUserId).then(function (data1) {
 
@@ -50,6 +53,7 @@ const getInfo = function () {
         </div>`);
     }
   });
+
 
   API2.getOneRead(currentUserId).then(function (data2) {
     for (let i = 0; i < data2.length; i++) {
