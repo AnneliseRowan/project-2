@@ -44,11 +44,13 @@ const getInfo = function () {
 
   API2.getAllRead().then(function (data3) {
     console.log('data3:', data3);
-    const friend = [];
+    const friend = [];     
+
     for (let i = 0; i < data3.length; i++) {
       if (data3[i].UserId != currentUserId) {
         console.log('data3[i]', data3[i].UserId);
         console.log('current user id', currentUserId);
+
         friend.push(data3[i]);
         const firstName = data3[i].User.firstName;
         const lastName = data3[i].User.lastName;
@@ -62,6 +64,9 @@ const getInfo = function () {
       </div>`);
       };
       // console.log('this my friend[0][User]]', friend[0]['User'][0]);
+
+      };
+
     }
 
     // return;
