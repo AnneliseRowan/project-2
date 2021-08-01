@@ -1,22 +1,22 @@
 {{> nav/nav-block}}
 
 <div id="main-container" class="container">
-  <div class="jumbotron text-center header-wrap" align="center">
-    <p class="mt-3 lead">Welcome to Follow the Reader</p>
+  {{!-- <div class="jumbotron text-center header-wrap" align="center"> --}}
+    <h2 class="animate__animated animate__fadeInDown" style="font-size: 130px; font-family: 'Lobster', cursive; margin-top: 300px; margin-left: 100px">Follow The Reader</h2>
+    <h2 class="animate__animated animate__fadeInUp" style="font-size: 32px; margin-left: 180px">A Dating App That Brings Book 'Lovers' Together</h2>
     {{!-- <p><strong>Don't forget to add books to your profile!</strong></p> --}}
     <hr class="my-4">
     <div id="loggedIn">
-      <div id="dashText">
+      <div id="dashText" style="margin-left: 400px">
       {{#if isloggedin}}
         You are logged in as {{user.firstName}}
         </div>
-        <a href="/logout"> <button type="btn" class="btn">Logout</button></a>
+        <a href="/logout"> <button type="btn" class="btn" style="margin-left: 450px; margin-top: 10px">Logout</button></a>
       {{else}}
         <p></p>
       {{/if}}
       <h5 id="login-err-msg"></h5>
-       <img src="https://source.unsplash.com/hmCMUZKLxa4/540x1139">
-    
+      {{!-- <img src="https://images.unsplash.com/photo-1526285759904-71d1170ed2ac?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80" alt=""> --}}
    </div>
     
   </div>
