@@ -33,6 +33,17 @@ const getInfo = function () {
 
   const currentUserId = document.getElementById('userId').getAttribute('data-currentId');
   API2.getAllOwnedBy(currentUserId).then(function (data1) {
+ 
+    console.log('data1', data1);
+
+    for (let i = 0; i < data1.length; i++) {
+      const bookTitle = data1[i].Book.title;
+      const bookAuthor = data1[i].Book.author;
+      const bookId = data1[i].Book.id;
+
+      $('.userLib-card').append(`<div class="card border-light mb-3 mx-auto" style="max-width: 18rem;">
+      <a href=localhost:3335/book/${bookId}>
+
     const bookTitle = [];
     const bookId = [];
     const bookAuthor = [];
@@ -68,6 +79,9 @@ const getInfo = function () {
     const bookId = [];
     const bookAuthor = [];
 
+      $('.read-card').append(`<div class="card border-light mb-3 mx-auto" style="max-width: 18rem;">
+      <a href=localhost:3335/book/${bookId}>
+      
     for (let i = 0; i < data2.length; i++) {
       // eslint-disable-next-line eqeqeq
       bookTitle.push(data2[i].Book.title);
@@ -83,6 +97,7 @@ const getInfo = function () {
       const bookIdJ = uniqueBookId[j];
       $('.read-card').append(`<div class="card border-light mb-3 mx-auto" style="max-width: 18rem;">
       <a href=localhost:3335/book/${bookIdJ}>
+
       
       <div class="card-body" id="${bookIdJ}>
       <h5 class="card-title"  </h5>
