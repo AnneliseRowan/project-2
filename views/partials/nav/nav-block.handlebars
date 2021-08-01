@@ -1,8 +1,8 @@
 <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
   <!-- Brand/logo -->
-  <a class="navbar-brand" href="/">
+  {{!-- <a class="navbar-brand" href="/">
     Follow the Reader
-  </a>
+  </a> --}}
   
   <!-- Links -->
   <ul class="nav navbar-nav ml-auto">
@@ -13,14 +13,14 @@
 
     {{#if isloggedin}}
     <li class="nav-item">
-      <a class="nav-link" href="/allbooks">Books</a>
+      <a class="nav-link" href="/allbooks">Library</a>
 
     </li>
       {{!-- <li class="nav-item">
         <a class="nav-link" href="/example">Example page</a>
       </li> --}}
       <li class="nav-item">
-        <a class="nav-link" href="/profile">My Profile</a>
+        <a class="nav-link" href="/profile">Profile</a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="/logout">Logout</a>
