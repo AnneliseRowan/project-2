@@ -11,8 +11,13 @@
               class="btn btn-outline-dark btn-sm btn-block">Edit User</a></div>
           <div class="media-body mb-5 text-white">
             <h4 class="mt-0 mb-0">{{userInfo.firstName}}</h4>
+
             <a href="mailto:{{userInfo.email}}"><h5 class="mt-0 mb-0" style="color:white">{{userInfo.email}}</h5></a>
 	          <span id="userId" data-currentId="{{userInfo.id}}"></span>
+
+            <a href="mailto:{{userInfo.email}}"><h5 class="mt-0 mb-0">{{userInfo.email}}</h5></a>
+	    <span id="userId" data-currentId="{{userInfo.id}}"></span>
+
             <p class="small mb-4"> <i class="fas fa-map-marker-alt mr-2"></i></p>
           </div>
         </div>
